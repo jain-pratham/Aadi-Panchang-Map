@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Indian (Jyotisha) display names for major solar system objects — English (India) locale -->
+<resources>
+    <string name="sun" translation_description="Name of the Sun">Surya</string>
+    <string name="moon" translation_description="Name of the Earth's Moon">Chandra</string>
+    <string name="mercury" translation_description="Name of the planet Mercury">Budh</string>
+    <string name="venus" translation_description="Name of the planet Venus">Shukra</string>
+    <string name="mars" translation_description="Name of the planet Mars">Mangal</string>
+    <string name="jupiter" translation_description="Name of the planet Jupiter">Guru</string>
+    <string name="saturn" translation_description="Name of the planet Saturn">Shani</string>
+</resources>

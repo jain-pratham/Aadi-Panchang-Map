@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- User-visible strings that reference major solar system object names — English (India) -->
+<resources>
+    <string name="search_hint" translation_description="an example search target">e.g. Mangal</string>
+    <string name="show_sky_gradient_preference_summary"
+        translation_description="Setting toggle summary for sky gradient: explains what the feature does">Shades the sky blue near Surya and dark on the opposite side</string>
+    <string name="ecliptic" translation_description="Label for the ecliptic layer — the apparent annual path of the Sun across the sky">Ecliptic</string>
+    <string name="time_travel_mercury_transit_2016" translation_description="Name of an astronomical event in the time travel picker. A Mercury transit is when Mercury passes across the face of the Sun as seen from Earth. Keep the date format suitable for your locale.">Budh transit of May 09, 2016</string>
+    <string name="time_travel_apollo_11" translation_description="Name of an astronomical event in the time travel picker: the first crewed Moon landing in 1969">Apollo 11 Chandra Landing</string>
+    <string name="time_travel_jupiter_saturn_2020" translation_description="Name of an astronomical event in the time travel picker. A conjunction is when two planets appear very close together in the sky.">Guru-Shani Conjunction of 2020</string>
+    <string name="time_travel_venus_jupiter_2026" translation_description="Name of an astronomical event in the time travel picker. A conjunction is when two planets appear very close together in the sky. Keep the date format suitable for your locale.">Shukra-Guru Conjunction, Jun 9, 2026</string>
+    <string name="time_travel_mars_uranus_2026" translation_description="Name of an astronomical event in the time travel picker. A close approach is when two objects appear near each other in the sky. Keep the date format suitable for your locale.">Mangal-Uranus Close Approach, Jul 4, 2026</string>
+    <string name="time_travel_jupiter_occultation_2026" translation_description="Name of an astronomical event in the time travel picker. A lunar occultation is when the Moon passes in front of a planet, briefly hiding it. Keep the date format suitable for your locale.">Lunar Occultation of Guru, Oct 6, 2026</string>
+    <string name="time_travel_supermoon_2026" translation_description="Name of an astronomical event in the time travel picker. A supermoon is a full moon that occurs near the Moon\'s closest approach to Earth. Keep the date format suitable for your locale.">Christmas Eve Supermoon, Dec 24, 2026</string>
+</resources>
