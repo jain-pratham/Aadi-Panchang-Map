@@ -150,8 +150,8 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             val mrigashiraDirectRa = 83.850006f
             val mrigashiraDirectDec = 9.93f
 
-            val ardraDirectRa = 91.8f
-            val ardraDirectDec = 7.41f
+            val ardraDirectRa = 84.8000f
+            val ardraDirectDec = 4.4100f
 
             val punarvasuDirectRa = 115.05f
             val punarvasuDirectDec = 29.96f
@@ -162,29 +162,29 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             val ashleshaDirectRa = 126.3000f
             val ashleshaDirectDec = 7.4500f
 
-            val maghaDirectRa = 155.1f
-            val maghaDirectDec = 11.97f
+            val maghaDirectRa = 145.6000f
+            val maghaDirectDec = 10.4700f
 
-            val purvaPhalguniDirectRa = 168.5267f
-            val purvaPhalguniDirectDec = 20.5240f
+            val purvaPhalguniDirectRa = 154.5267f
+            val purvaPhalguniDirectDec = 24.0240f
 
-            val uttaraPhalguniDirectRa = 190.3000f
-            val uttaraPhalguniDirectDec = 7.5700f
+            val uttaraPhalguniDirectRa = 168.8000f
+            val uttaraPhalguniDirectDec = 16.5700f
 
-            val hastaDirectRa = 188.6117f
-            val hastaDirectDec = -20.0184f
+            val hastaDirectRa = 174.1117f
+            val hastaDirectDec = -10.0184f
 
             val chitraDirectRa = 201.3f
             val chitraDirectDec = -11.16f
 
-            val swatiDirectRa = 216.90001f
-            val swatiDirectDec = 19.19f
+            val swatiDirectRa = 219.9000f
+            val swatiDirectDec = 14.19000f
 
-            val vishakhaDirectRa = 222.67185f
-            val vishakhaDirectDec = -15.99708f
+            val vishakhaDirectRa = 233.6719f
+            val vishakhaDirectDec = -14.9971f
 
-            val anuradhaDirectRa = 240.0834f
-            val anuradhaDirectDec = -22.62161f
+            val anuradhaDirectRa = 245.0834f
+            val anuradhaDirectDec = -23.1216f
 
             val jyeshthaDirectRa = 249.3500f
             val jyeshthaDirectDec = -27.4300f
@@ -195,29 +195,29 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             val purvashadhaDirectRa = 274.8000f
             val purvashadhaDirectDec = -29.3000f
 
-            val uttarashadhaDirectRa = 291.8000f
-            val uttarashadhaDirectDec = -25.3000f
+            val uttarashadhaDirectRa = 286.8000f
+            val uttarashadhaDirectDec = -5.3000f
 
-            val shravanaDirectRa = 300.75f
-            val shravanaDirectDec = 8.87f
+            val shravanaDirectRa = 310.4529f
+            val shravanaDirectDec = 15.4266f
 
-            val dhanishtaDirectRa = 310.4529f
-            val dhanishtaDirectDec = 15.4266f
+            val dhanishtaDirectRa = 318.2500f
+            val dhanishtaDirectDec = 29.8700f
 
-            val shatabhishaDirectRa = 312.6536f
-            val shatabhishaDirectDec = -5.5000f
+            val shatabhishaDirectRa = 331.2f
+            val shatabhishaDirectDec = -1.79f
 
-            val purvaBhadrapadaDirectRa = 331.2000f
-            val purvaBhadrapadaDirectDec = -1.7900f
+            val purvaBhadrapadaDirectRa = 337.7000f
+            val purvaBhadrapadaDirectDec = 0.2100f
 
-            val uttaraBhadrapadaDirectRa = 6.3f
-            val uttaraBhadrapadaDirectDec = 15.18f
+            val uttaraBhadrapadaDirectRa = -0.2000f
+            val uttaraBhadrapadaDirectDec = 6.6800f
 
             val revatiDirectRa = 18.4325f
             val revatiDirectDec = 7.5755f
 
-            val abhijitDirectRa = 283.0f
-            val abhijitDirectDec = 42.0f
+            val abhijitDirectDec = 279.0000f
+            val abhijitDirectRa = 37.0000f
 
 
 
