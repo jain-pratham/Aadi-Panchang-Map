@@ -216,8 +216,8 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             val revatiDirectRa = 18.4325f
             val revatiDirectDec = 7.5755f
 
-            val abhijitDirectDec = 279.0000f
-            val abhijitDirectRa = 37.0000f
+            val abhijitDirectDec = 38.789f
+            val abhijitDirectRa = 279.3f
 
 
 

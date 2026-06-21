@@ -169,9 +169,17 @@ class ProtobufAstronomicalRenderable(
             val points = ArrayList<TextPrimitive>(proto.labelCount)
             for (element in proto.labelList) {
                 Log.d(TAG, "Label " + element.stringsIntId + " : " + element.stringsStrId)
+                
+                var coords = getCoords(element.location)
+                if (element.stringsStrId == "lyra") {
+                    coords = getGeocentricCoords(289.0f, 45.0f)
+                } else if (element.stringsStrId == "vega") {
+                    coords = getGeocentricCoords(276.0f, 38.0f)
+                }
+                
                 points.add(
                     TextPrimitive(
-                        getCoords(element.location),
+                        coords,
                         resources.getString(element.stringsIntId),
                         element.color, element.offset, element.fontSize
                     )
