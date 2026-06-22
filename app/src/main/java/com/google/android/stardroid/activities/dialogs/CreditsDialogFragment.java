@@ -48,9 +48,20 @@ public class CreditsDialogFragment extends DialogFragment {
               dialog.dismiss();
             }).create();
 
-    String creditsText = String.format(parentActivity.getString(R.string.credits_text),
-        parentActivity.getString(R.string.sponsors_text),
-        parentActivity.getString(R.string.contributors_text));
+    String rawCredits = parentActivity.getString(R.string.credits_text);
+    int splitIndex = rawCredits.indexOf("<p>%1$s</p>");
+    if (splitIndex == -1) splitIndex = rawCredits.indexOf("&lt;p&gt;%1$s&lt;/p&gt;");
+    if (splitIndex != -1) {
+        rawCredits = rawCredits.substring(splitIndex + 11); // 11 is the length of "<p>%1$s</p>" or "&lt;p&gt;%1$s&lt;/p&gt;" equivalent
+        // Actually, to be safe, just substring from the next newline or <h1>
+        int h1Index = rawCredits.indexOf("<h1>");
+        if (h1Index == -1) h1Index = rawCredits.indexOf("&lt;h1&gt;");
+        if (h1Index != -1) rawCredits = rawCredits.substring(h1Index);
+    }
+
+    String creditsText = String.format(rawCredits, "", "");
+    // Dynamically remove the "Open Source Contributors" section across all translations
+    creditsText = creditsText.replaceAll("(?is)<h2>[^<]*</h2>\\s*<p>\\s*</p>\\s*<p>[^<]*<a href=\"[^\"]*graphs/contributors[^\"]*\">.*?</a>.*?</p>", "");
 
     boolean isNight = ActivityLightLevelManager.isNightMode(preferences);
     String bodyClass = isNight ? " class=\"night-mode\"" : "";

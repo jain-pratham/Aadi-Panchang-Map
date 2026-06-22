@@ -53,9 +53,18 @@ public class HelpDialogFragment extends DialogFragment {
                 dialog.dismiss();
               }
             }).create();
-    String creditsText = String.format(activity.getString(R.string.credits_text),
-        activity.getString(R.string.sponsors_text),
-        activity.getString(R.string.contributors_text));
+    String rawCredits = activity.getString(R.string.credits_text);
+    int splitIndex = rawCredits.indexOf("<p>%1$s</p>");
+    if (splitIndex == -1) splitIndex = rawCredits.indexOf("&lt;p&gt;%1$s&lt;/p&gt;");
+    if (splitIndex != -1) {
+        rawCredits = rawCredits.substring(splitIndex + 11);
+        int h1Index = rawCredits.indexOf("<h1>");
+        if (h1Index == -1) h1Index = rawCredits.indexOf("&lt;h1&gt;");
+        if (h1Index != -1) rawCredits = rawCredits.substring(h1Index);
+    }
+
+    String creditsText = String.format(rawCredits, "", "");
+    creditsText = creditsText.replaceAll("(?is)<h2>[^<]*</h2>\\s*<p>\\s*</p>\\s*<p>[^<]*<a href=\"[^\"]*graphs/contributors[^\"]*\">.*?</a>.*?</p>", "");
 
     String whatsNewContentText = activity.getString(R.string.whats_new_content);
     String betaTesterHelp = activity.getString(R.string.beta_user_help_text);
