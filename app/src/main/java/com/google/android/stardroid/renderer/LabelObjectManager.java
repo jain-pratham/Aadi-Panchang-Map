@@ -272,7 +272,7 @@ public class LabelObjectManager extends RendererObjectManager {
    */
   private static class Label extends LabelMaker.LabelData {
     public Label(TextPrimitive ts, double fontSizeScale) {
-      super(ts.getText(), 0xffffffff, (int)(fontSizeScale * ts.getFontSize()));
+      super(ts.getText(), 0xffffffff, (int)(fontSizeScale * ts.getFontSize()), ts.outlineColor, ts.outlineWidth);
 
       Vector3 location = ts.getLocation();
       x = location.x;

@@ -29,9 +29,15 @@ public class TextPrimitive extends AbstractPrimitive {
   public String label;
   public final float offset;
   public final int fontSize;
+  public final int outlineColor;
+  public final float outlineWidth;
 
   public TextPrimitive(float ra, float dec, String label, int color) {
     this(CoordinateManipulationsKt.getGeocentricCoords(ra, dec), label, color);
+  }
+
+  public TextPrimitive(float ra, float dec, String label, int color, int outlineColor, float outlineWidth) {
+    this(CoordinateManipulationsKt.getGeocentricCoords(ra, dec), label, color, 0.02f, 15, outlineColor, outlineWidth);
   }
 
   public TextPrimitive(Vector3 coords, String label, int color) {
@@ -40,6 +46,11 @@ public class TextPrimitive extends AbstractPrimitive {
 
   public TextPrimitive(Vector3 coords, String label, int color, float offset,
                        int fontSize) {
+    this(coords, label, color, offset, fontSize, 0, 0f);
+  }
+
+  public TextPrimitive(Vector3 coords, String label, int color, float offset,
+                       int fontSize, int outlineColor, float outlineWidth) {
 
     super(coords, color);
     this.label = Preconditions.checkNotNull(label);
@@ -47,6 +58,8 @@ public class TextPrimitive extends AbstractPrimitive {
 
     this.offset = offset;
     this.fontSize = fontSize;
+    this.outlineColor = outlineColor;
+    this.outlineWidth = outlineWidth;
   }
 
   public String getText() {

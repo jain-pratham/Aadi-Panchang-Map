@@ -134,24 +134,23 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             // Direct RA/DEC override for Ashwini (bypassing all coordinate conversions)
 
 
-
             val ashwiniDirectRa = 28.5f
             val ashwiniDirectDec = 20.05f
 
             val bharaniDirectRa = 34.8f
             val bharaniDirectDec = 23.46f
 
-            val krittikaDirectRa = 48.8500f
-            val krittikaDirectDec = 22.1100f
+            val krittikaDirectRa = 56.85f
+            val krittikaDirectDec = 24.11f
 
-            val rohiniDirectRa = 72.0f
+            val rohiniDirectRa = 69.0f
             val rohiniDirectDec = 16.51f
 
             val mrigashiraDirectRa = 83.850006f
             val mrigashiraDirectDec = 9.93f
 
-            val ardraDirectRa = 84.8000f
-            val ardraDirectDec = 4.4100f
+            val ardraDirectRa = 88.8f
+            val ardraDirectDec = 7.41f
 
             val punarvasuDirectRa = 115.05f
             val punarvasuDirectDec = 29.96f
@@ -159,65 +158,65 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
             val pushyaDirectRa = 127.95f
             val pushyaDirectDec = 18.09f
 
-            val ashleshaDirectRa = 126.3000f
-            val ashleshaDirectDec = 7.4500f
+            val ashleshaDirectRa = 133.8f
+            val ashleshaDirectDec = 5.95f
 
-            val maghaDirectRa = 145.6000f
-            val maghaDirectDec = 10.4700f
+            val maghaDirectRa = 152.1f
+            val maghaDirectDec = 11.97f
 
-            val purvaPhalguniDirectRa = 154.5267f
-            val purvaPhalguniDirectDec = 24.0240f
+            val purvaPhalguniDirectRa = 168.5267f
+            val purvaPhalguniDirectDec = 20.524f
 
-            val uttaraPhalguniDirectRa = 168.8000f
-            val uttaraPhalguniDirectDec = 16.5700f
+            val uttaraPhalguniDirectRa = 177.29999f
+            val uttaraPhalguniDirectDec = 14.57f
 
-            val hastaDirectRa = 174.1117f
-            val hastaDirectDec = -10.0184f
+            val hastaDirectRa = 185.6117f
+            val hastaDirectDec = -20.0184f
 
             val chitraDirectRa = 201.3f
             val chitraDirectDec = -11.16f
 
-            val swatiDirectRa = 219.9000f
-            val swatiDirectDec = 14.19000f
+            val swatiDirectRa = 213.90001f
+            val swatiDirectDec = 19.19f
 
-            val vishakhaDirectRa = 233.6719f
-            val vishakhaDirectDec = -14.9971f
+            val vishakhaDirectRa = 222.67185f
+            val vishakhaDirectDec = -15.99708f
 
-            val anuradhaDirectRa = 245.0834f
-            val anuradhaDirectDec = -23.1216f
+            val anuradhaDirectRa = 240.0834f
+            val anuradhaDirectDec = -22.62161f
 
-            val jyeshthaDirectRa = 249.3500f
-            val jyeshthaDirectDec = -27.4300f
+            val jyeshthaDirectRa = 247.34999f
+            val jyeshthaDirectDec = -26.43f
 
-            val moolaDirectRa = 264.4000f
-            val moolaDirectDec = -43.1000f
+            val moolaDirectRa = 263.4f
+            val moolaDirectDec = -37.1f
 
-            val purvashadhaDirectRa = 274.8000f
-            val purvashadhaDirectDec = -29.3000f
+            val purvashadhaDirectRa = 276.0f
+            val purvashadhaDirectDec = -34.38f
 
-            val uttarashadhaDirectRa = 286.8000f
-            val uttarashadhaDirectDec = -5.3000f
+            val uttarashadhaDirectRa = 283.8f
+            val uttarashadhaDirectDec = -26.3f
 
-            val shravanaDirectRa = 310.4529f
-            val shravanaDirectDec = 15.4266f
+            val shravanaDirectRa = 297.75f
+            val shravanaDirectDec = 8.87f
 
-            val dhanishtaDirectRa = 318.2500f
-            val dhanishtaDirectDec = 29.8700f
+            val dhanishtaDirectRa = 310.4529f
+            val dhanishtaDirectDec = 15.4266f
 
-            val shatabhishaDirectRa = 331.2f
-            val shatabhishaDirectDec = -1.79f
+            val shatabhishaDirectRa = 343.1536f
+            val shatabhishaDirectDec = -7.578f
 
-            val purvaBhadrapadaDirectRa = 337.7000f
-            val purvaBhadrapadaDirectDec = 0.2100f
+            val purvaBhadrapadaDirectRa = 346.2f
+            val purvaBhadrapadaDirectDec = 15.21f
 
-            val uttaraBhadrapadaDirectRa = -0.2000f
-            val uttaraBhadrapadaDirectDec = 6.6800f
+            val uttaraBhadrapadaDirectRa = 3.3f
+            val uttaraBhadrapadaDirectDec = 15.18f
 
             val revatiDirectRa = 18.4325f
             val revatiDirectDec = 7.5755f
 
-            val abhijitDirectDec = 38.789f
-            val abhijitDirectRa = 279.3f
+            val abhijitDirectRa = 99.28f
+            val abhijitDirectDec = 141.3f
 
 
 
@@ -274,8 +273,8 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
                     // Store coordinates for search
                     nakshatraCoordinates[nakshatra.name] = Pair(raDec.ra, raDec.dec)
                     
-                    // Create label
-                    labels.add(TextPrimitive(raDec.ra, raDec.dec, displayName, LABEL_COLOR))
+                    // Create label with black outline/glow
+                    labels.add(TextPrimitive(raDec.ra, raDec.dec, displayName, LABEL_COLOR, Color.BLACK, 4f))
                     
                     // Create ring if enabled
                     if (showCircles) {
@@ -299,8 +298,8 @@ class NakshatraLayer(resources: Resources, preferences: SharedPreferences) : Abs
                     // Store coordinates for search
                     nakshatraCoordinates[nakshatra.name] = Pair(raDec.ra, raDec.dec)
                     
-                    // Create label
-                    labels.add(TextPrimitive(raDec.ra, raDec.dec, displayName, LABEL_COLOR))
+                    // Create label with black outline/glow
+                    labels.add(TextPrimitive(raDec.ra, raDec.dec, displayName, LABEL_COLOR, Color.BLACK, 4f))
                     
                     // Create ring if enabled
                     if (showCircles) {

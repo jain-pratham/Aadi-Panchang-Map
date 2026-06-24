@@ -51,9 +51,15 @@ public class LabelMaker {
    */
   public static class LabelData {
     public LabelData(String text, int color, int fontSize) {
+      this(text, color, fontSize, 0, 0f);
+    }
+
+    public LabelData(String text, int color, int fontSize, int outlineColor, float outlineWidth) {
       mText = text;
       mColor = color;
       mFontSize = fontSize;
+      mOutlineColor = outlineColor;
+      mOutlineWidth = outlineWidth;
     }
     // Sets data about the label's position in the texture.
     public void setTextureData(int widthInPixels, int heightInPixels, 
@@ -97,6 +103,14 @@ public class LabelMaker {
     public int getFontSize() {
       return mFontSize;
     }
+
+    public int getOutlineColor() {
+      return mOutlineColor;
+    }
+
+    public float getOutlineWidth() {
+      return mOutlineWidth;
+    }
     
     public int getWidthInPixels() {
       return mWidthInPixels;
@@ -117,6 +131,8 @@ public class LabelMaker {
     private String mText;
     final private int mColor;
     final private int mFontSize;
+    private int mOutlineColor = 0;
+    private float mOutlineWidth = 0f;
     private int mWidthInPixels = 0;
     private int mHeightInPixels = 0;
     private IntBuffer mTexCoords;
@@ -224,6 +240,11 @@ public class LabelMaker {
       // but just making the text smaller is much easier.
       
       int fontSize = label.getFontSize();
+      float strokePadding = 0;
+      if (label.getOutlineWidth() > 0) {
+          strokePadding = label.getOutlineWidth() * mRes.getDisplayMetrics().density;
+      }
+      
       do { 
         textPaint.setColor(0xff000000 | label.getColor());
         textPaint.setTextSize(fontSize * mRes.getDisplayMetrics().density);
@@ -233,8 +254,8 @@ public class LabelMaker {
         descent = (int) Math.ceil(textPaint.descent());
         measuredTextWidth = (int) Math.ceil(textPaint.measureText(label.getText()));
     
-        height = ascent + descent;
-        width = measuredTextWidth;
+        height = ascent + descent + (int) Math.ceil(strokePadding);
+        width = measuredTextWidth + (int) Math.ceil(strokePadding);
         
         // If it's wider than the screen, try it again with a font size of 1
         // smaller.
@@ -259,10 +280,21 @@ public class LabelMaker {
         throw new IllegalArgumentException("Out of texture space.");
       }
   
-      int vBase = v + ascent;
+      int vBase = v + ascent + (int) (strokePadding / 2);
+      int drawU = u + (int) (strokePadding / 2);
       
       if (drawToCanvas) {
-        mCanvas.drawText(label.getText(), u, vBase, textPaint);
+        if (label.getOutlineWidth() > 0) {
+            textPaint.setStyle(Paint.Style.STROKE);
+            textPaint.setStrokeJoin(Paint.Join.ROUND);
+            textPaint.setStrokeWidth(strokePadding);
+            textPaint.setColor(0xff000000 | label.getOutlineColor());
+            mCanvas.drawText(label.getText(), drawU, vBase, textPaint);
+        }
+        
+        textPaint.setStyle(Paint.Style.FILL);
+        textPaint.setColor(0xff000000 | label.getColor());
+        mCanvas.drawText(label.getText(), drawU, vBase, textPaint);
       
         label.setTextureData(width, height, u, v + height, width, -height,
                              mTexelWidth, mTexelHeight);
