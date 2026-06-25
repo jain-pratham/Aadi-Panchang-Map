@@ -284,17 +284,24 @@ public class LabelMaker {
       int drawU = u + (int) (strokePadding / 2);
       
       if (drawToCanvas) {
+        // Set Paint.Align.CENTER so the text is centered under the circle
+        textPaint.setTextAlign(Paint.Align.CENTER);
+        int centerX = drawU + measuredTextWidth / 2;
+        
         if (label.getOutlineWidth() > 0) {
             textPaint.setStyle(Paint.Style.STROKE);
             textPaint.setStrokeJoin(Paint.Join.ROUND);
             textPaint.setStrokeWidth(strokePadding);
             textPaint.setColor(0xff000000 | label.getOutlineColor());
-            mCanvas.drawText(label.getText(), drawU, vBase, textPaint);
+            mCanvas.drawText(label.getText(), centerX, vBase, textPaint);
         }
         
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setColor(0xff000000 | label.getColor());
-        mCanvas.drawText(label.getText(), drawU, vBase, textPaint);
+        mCanvas.drawText(label.getText(), centerX, vBase, textPaint);
+        
+        // Reset alignment
+        textPaint.setTextAlign(Paint.Align.LEFT);
       
         label.setTextureData(width, height, u, v + height, width, -height,
                              mTexelWidth, mTexelHeight);

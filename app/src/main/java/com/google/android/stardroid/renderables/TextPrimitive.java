@@ -40,6 +40,10 @@ public class TextPrimitive extends AbstractPrimitive {
     this(CoordinateManipulationsKt.getGeocentricCoords(ra, dec), label, color, 0.02f, 15, outlineColor, outlineWidth);
   }
 
+  public TextPrimitive(float ra, float dec, String label, int color, float offset, int outlineColor, float outlineWidth) {
+    this(CoordinateManipulationsKt.getGeocentricCoords(ra, dec), label, color, offset, 15, outlineColor, outlineWidth);
+  }
+
   public TextPrimitive(Vector3 coords, String label, int color) {
     this(coords, label, color, 0.02f, 15);
   }

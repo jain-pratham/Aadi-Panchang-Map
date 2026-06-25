@@ -315,29 +315,73 @@ public class LabelObjectManager extends RendererObjectManager {
     
     // Offset the label to be underneath the given position (so a label will 
     // always appear underneath a star no matter how the phone is rotated) 
-    Vector3 v = new Vector3(
-        label.x - mLabelOffset.x * label.offset,
-        label.y - mLabelOffset.y * label.offset,
-        label.z - mLabelOffset.z * label.offset);
-    
-    Vector3 screenPos = Matrix4x4.transformVector(
-        getRenderState().getTransformToScreenMatrix(),
-        v);
-    
-    // We want this to align consistently with the pixels on the screen, so we
-    // snap to the nearest x/y coordinate, and add a magic offset of less than
-    // half a pixel.  Without this, rounding error can cause the bottom and
-    // top of a label to be one pixel off, which results in a noticeable
-    // distortion in the text.
+    Vector3 v;
+    Vector3 screenPos;
     final float MAGIC_OFFSET = 0.25f;
-    screenPos.x = (int)screenPos.x + MAGIC_OFFSET;
-    screenPos.y = (int)screenPos.y + MAGIC_OFFSET;
-
-    gl.glPushMatrix();
     
-    gl.glTranslatef(screenPos.x, screenPos.y, 0);
-    gl.glRotatef(RADIANS_TO_DEGREES * getRenderState().getUpAngle(), 0, 0, -1);
-    gl.glScalef(label.getWidthInPixels(), label.getHeightInPixels(), 1);
+    boolean isNakshatra = label.getOutlineWidth() > 0;
+    
+    if (isNakshatra) {
+        // Draw the text using the SAME X coordinate as the circle center.
+        v = new Vector3(label.x, label.y, label.z);
+        screenPos = Matrix4x4.transformVector(
+            getRenderState().getTransformToScreenMatrix(),
+            v);
+        
+        screenPos.x = (int)screenPos.x + MAGIC_OFFSET;
+        screenPos.y = (int)screenPos.y + MAGIC_OFFSET;
+
+        gl.glPushMatrix();
+        
+        gl.glTranslatef(screenPos.x, screenPos.y, 0);
+        gl.glRotatef(RADIANS_TO_DEGREES * getRenderState().getUpAngle(), 0, 0, -1);
+        
+        // Set the text Y coordinate to: textY = circleCenterY + circleRadius + labelSpacing
+        // Recalculate the label position using the current rendered circle radius after zoom is applied.
+        float fovyInRadians = getRenderState().getRadiusOfView() * 3.141593f / 360.0f;
+        float halfScreenHeight = getRenderState().getScreenHeight() * 0.5f;
+        float circleRadiusDegrees = 2.0f; // NakshatraLayer.RING_RADIUS_DEGREES
+        float radiusInRadians = circleRadiusDegrees * 3.141593f / 180.0f;
+        
+        // Exact projected circle radius in screen pixels
+        float circleRadiusPixels = (float) (Math.tan(radiusInRadians) / Math.tan(fovyInRadians)) * halfScreenHeight;
+        
+        // The gap between the circle and the label should scale with the rendered circle size.
+        float scaledGap = circleRadiusPixels * 0.5f;
+        
+        // The label must never enter, touch, or overlap the circle.
+        // We ensure the gap is at least large enough to clear the top half of the text quad + 5px padding.
+        float minGap = (label.getHeightInPixels() * 0.5f) + 5.0f;
+        float actualGap = Math.max(scaledGap, minGap);
+        
+        float offset = circleRadiusPixels + actualGap;
+        gl.glTranslatef(0, -offset, 0);
+        
+        gl.glScalef(label.getWidthInPixels(), label.getHeightInPixels(), 1);
+    } else {
+        v = new Vector3(
+            label.x - mLabelOffset.x * label.offset,
+            label.y - mLabelOffset.y * label.offset,
+            label.z - mLabelOffset.z * label.offset);
+        
+        screenPos = Matrix4x4.transformVector(
+            getRenderState().getTransformToScreenMatrix(),
+            v);
+        
+        // We want this to align consistently with the pixels on the screen, so we
+        // snap to the nearest x/y coordinate, and add a magic offset of less than
+        // half a pixel.  Without this, rounding error can cause the bottom and
+        // top of a label to be one pixel off, which results in a noticeable
+        // distortion in the text.
+        screenPos.x = (int)screenPos.x + MAGIC_OFFSET;
+        screenPos.y = (int)screenPos.y + MAGIC_OFFSET;
+
+        gl.glPushMatrix();
+        
+        gl.glTranslatef(screenPos.x, screenPos.y, 0);
+        gl.glRotatef(RADIANS_TO_DEGREES * getRenderState().getUpAngle(), 0, 0, -1);
+        gl.glScalef(label.getWidthInPixels(), label.getHeightInPixels(), 1);
+    }
    
     gl.glVertexPointer(2, GL10.GL_FIXED, 0, mQuadBuffer);
     gl.glTexCoordPointer(2, GL10.GL_FIXED, 0, label.getTexCoords());
