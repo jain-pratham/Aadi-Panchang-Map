@@ -4,7 +4,7 @@ import os
 import json
 import urllib.request
 
-REPO = "sky-map-team/stardroid"
+REPO = "jain-pratham/Aadi-Panchang-Map"
 
 def first_paragraph(text, max_chars=300):
     """Extract the first non-empty paragraph from text, up to max_chars."""

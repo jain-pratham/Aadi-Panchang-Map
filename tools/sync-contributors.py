@@ -5,7 +5,7 @@ import requests
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-REPO = "sky-map-team/stardroid"
+REPO = "jain-pratham/Aadi-Panchang-Map"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_PATH = os.path.join(SCRIPT_DIR, "../app/src/main/res/values/notranslate-contributors.xml")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
