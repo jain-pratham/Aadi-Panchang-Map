@@ -1,6 +1,6 @@
 # Aadi Panchang Map Privacy Policy
 
-**Effective Date:** To be set before publication (Must be finalized prior to public release)
+**Effective Date:** September 13, 2026
 
 ---
 
