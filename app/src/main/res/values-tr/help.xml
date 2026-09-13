@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Android için Aadi Panchang Map&lt;/h1&gt;
 &lt;p class="version"&gt;Sürüm %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;Giriş ve Hızlı Başlangıç&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;Telefonunuzda jiroskop yoksa, sensör ayarlarında &lt;b&gt;Jiroskopu Devre Dışı Bırak&lt;/b&gt; seçeneğini etkinleştirin&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Tüm sorun giderme ayrıntıları için çevrimiçi &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;sorun giderme&lt;/a&gt; kılavuzuna bakın.&lt;/p&gt;
-&lt;p class="callout"&gt;Hala takılırsanız, bize skymapdevs@gmail.com adresinden e-posta gönderin — Tanılama sayfanızın bir ekran görüntüsü çok yardımcı olacaktır.&lt;/p&gt;
+&lt;p class="callout"&gt;Hala takılırsanız, bize jainpratham4050@gmail.com adresinden e-posta gönderin — Tanılama sayfanızın bir ekran görüntüsü çok yardımcı olacaktır.&lt;/p&gt;
 
 &lt;h1&gt;Aadi Panchang Map\u0027teki yenilikler neler?&lt;/h1&gt;
 

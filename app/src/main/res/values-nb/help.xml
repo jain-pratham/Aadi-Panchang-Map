@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Aadi Panchang Map for Android&lt;/h1&gt;
 &lt;p class="version"&gt;Versjon %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;Introduksjon og hurtigstart&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;Hvis telefonen din ikke har gyroskop, aktiver &lt;b&gt;Deaktiver Gyro&lt;/b&gt; i sensorinnstillingene&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For fullstendige feilsøkingsdetaljer, se den nettbaserte &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;feilsøkingsguiden&lt;/a&gt;.&lt;/p&gt;
-&lt;p class="callout"&gt;Hvis du fortsatt står fast, send oss en e-post på skymapdevs@gmail.com — et skjermbilde av Diagnostikk-siden din er veldig nyttig.&lt;/p&gt;
+&lt;p class="callout"&gt;Hvis du fortsatt står fast, send oss en e-post på jainpratham4050@gmail.com — et skjermbilde av Diagnostikk-siden din er veldig nyttig.&lt;/p&gt;
 
 &lt;h1&gt;Hva er nytt i Aadi Panchang Map?&lt;/h1&gt;
 

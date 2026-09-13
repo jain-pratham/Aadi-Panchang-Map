@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;تطبيق خريطة السماء لأندرويد&lt;/h1&gt;
 &lt;p class="version"&gt;الإصدار %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;مقدمة وبدء سريع&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;إذا كان هاتفك لا يحتوي على جيروسكوب، فقم بتمكين &lt;b&gt;تعطيل الجيروسكوب&lt;/b&gt; في إعدادات المستشعر&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;للحصول على تفاصيل استكشاف الأخطاء وإصلاحها بالكامل، راجع دليل &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;استكشاف الأخطاء وإصلاحها&lt;/a&gt; عبر الإنترنت.&lt;/p&gt;
-&lt;p class="callout"&gt;إذا كنت لا تزال تواجه مشكلة، راسلنا عبر البريد الإلكتروني على skymapdevs@gmail.com — لقطة شاشة لصفحة التشخيصات الخاصة بك مفيدة جدًا.&lt;/p&gt;
+&lt;p class="callout"&gt;إذا كنت لا تزال تواجه مشكلة، راسلنا عبر البريد الإلكتروني على jainpratham4050@gmail.com — لقطة شاشة لصفحة التشخيصات الخاصة بك مفيدة جدًا.&lt;/p&gt;
 
 &lt;h1&gt;ما الجديد في خريطة السماء؟&lt;/h1&gt;
 

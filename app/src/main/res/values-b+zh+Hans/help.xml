@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;星空地图 Android 版&lt;/h1&gt;
 &lt;p class="version"&gt;版本 %s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2&gt;简介和快速入门&lt;/h2&gt;
 &lt;p&gt;星空地图可让您的 Android 手机成为一扇仰望夜空的窗口。当您对着天空举起手机时，就会看到一张与天空中相应区域最亮的恒星、星座和行星对应的天体图。&lt;/p&gt;
 &lt;p&gt;当您下一次看到明亮的星星，并且想知道它的名称时，试试星空地图吧！&lt;/p&gt;

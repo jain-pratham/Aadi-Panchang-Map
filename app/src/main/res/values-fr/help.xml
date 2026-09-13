@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Aadi Panchang Map pour Android&lt;/h1&gt;
 &lt;p class="version"&gt;Version %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;Introduction et Démarrage rapide&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;Si votre téléphone n\'a pas de gyroscope, activez &lt;b&gt;Désactiver le gyroscope&lt;/b&gt; dans les paramètres des capteurs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Pour des détails complets sur le dépannage, consultez le guide de &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;dépannage&lt;/a&gt; en ligne.&lt;/p&gt;
-&lt;p class="callout"&gt;Si vous êtes toujours bloqué, envoyez-nous un e-mail à skymapdevs@gmail.com — une capture d\'écran de votre page Diagnostics est très utile.&lt;/p&gt;
+&lt;p class="callout"&gt;Si vous êtes toujours bloqué, envoyez-nous un e-mail à jainpratham4050@gmail.com — une capture d\'écran de votre page Diagnostics est très utile.&lt;/p&gt;
 
 &lt;h1&gt;Quoi de neuf dans Aadi Panchang Map ?&lt;/h1&gt;
 

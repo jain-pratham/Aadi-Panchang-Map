@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Aadi Panchang Map pre Android&lt;/h1&gt;
 &lt;p class="version"&gt;Verzia %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;Úvod a rýchly štart&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;Ak váš telefón nemá gyroskop, povoľte &lt;b&gt;Zakázať gyroskop&lt;/b&gt; v nastaveniach senzorov&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Úplné podrobnosti o riešení problémov nájdete v online príručke &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;riešenia problémov&lt;/a&gt;.&lt;/p&gt;
-&lt;p class="callout"&gt;Ak ste stále zablokovaní, pošlite nám e-mail na skymapdevs@gmail.com – snímka obrazovky vašej stránky Diagnostika je veľmi užitočná.&lt;/p&gt;
+&lt;p class="callout"&gt;Ak ste stále zablokovaní, pošlite nám e-mail na jainpratham4050@gmail.com – snímka obrazovky vašej stránky Diagnostika je veľmi užitočná.&lt;/p&gt;
 
 &lt;h1&gt;Čo je nové v Aadi Panchang Map?&lt;/h1&gt;
 

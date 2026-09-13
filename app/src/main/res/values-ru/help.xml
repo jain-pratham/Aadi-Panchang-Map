@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Карта звездного неба для Android&lt;/h1&gt;
 &lt;p class="version"&gt;Версия %s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2&gt;Введение и руководство по началу работы&lt;/h2&gt;
 &lt;p&gt;Карта звездного неба превратит ваш мобильный телефон на платформе Android в окно, через которое можно наблюдать звездное небо. Направьте телефон вверх, и вы увидите карту самых ярких звезд, созвездий и планет этого участка неба.&lt;/p&gt;
 &lt;p&gt;А когда вам подмигнет какая-нибудь яркая звезда, вы сможете узнать ее имя с помощью Карты звездного неба!&lt;/p&gt;

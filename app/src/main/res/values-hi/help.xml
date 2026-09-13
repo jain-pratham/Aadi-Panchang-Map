@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;एंड्रॉइड के लिए स्काई मैप&lt;/h1&gt;
 &lt;p class="version"&gt;संस्करण %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;परिचय और त्वरित शुरुआत&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;यदि आपके फ़ोन में कोई जाइरोस्कोप नहीं है, तो सेंसर सेटिंग्स में &lt;b&gt;जाइरो को अक्षम करें&lt;/b&gt; सक्षम करें&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;पूर्ण समस्या निवारण विवरण के लिए ऑनलाइन &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;समस्या निवारण&lt;/a&gt; गाइड देखें।&lt;/p&gt;
-&lt;p class="callout"&gt;यदि आप अभी भी फंसे हुए हैं, तो हमें skymapdevs@gmail.com पर ईमेल करें — आपके निदान पृष्ठ का एक स्क्रीनशॉट बहुत उपयोगी है।&lt;/p&gt;
+&lt;p class="callout"&gt;यदि आप अभी भी फंसे हुए हैं, तो हमें jainpratham4050@gmail.com पर ईमेल करें — आपके निदान पृष्ठ का एक स्क्रीनशॉट बहुत उपयोगी है।&lt;/p&gt;
 
 &lt;h1&gt;स्काई मैप में नया क्या है?&lt;/h1&gt;
 

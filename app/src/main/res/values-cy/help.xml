@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;Aadi Panchang Map ar gyfer Android&lt;/h1&gt;
 &lt;p class="version"&gt;Fersiwn %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;Cyflwyniad a Chychwyn Cyflym&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;Os nad oes gan eich ffôn geirosgop, galluogwch &lt;b&gt;Analluogi geirosgop&lt;/b&gt; yn gosodiadau synhwyrydd&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Am fanylion datrys problemau llawn, gweler y canllaw &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;datrys problemau&lt;/a&gt; ar-lein.&lt;/p&gt;
-&lt;p class="callout"&gt;Os ydych chi\u2019n dal i fod yn sownd, e-bostiwch ni yn skymapdevs@gmail.com &amp;#8212; mae sgrinlun o\u2019ch tudalen Diagnosteg yn ddefnyddiol iawn.&lt;/p&gt;
+&lt;p class="callout"&gt;Os ydych chi\u2019n dal i fod yn sownd, e-bostiwch ni yn jainpratham4050@gmail.com &amp;#8212; mae sgrinlun o\u2019ch tudalen Diagnosteg yn ddefnyddiol iawn.&lt;/p&gt;
 
 &lt;h1&gt;Beth sy\u2019n newydd yn Aadi Panchang Map?&lt;/h1&gt;
 

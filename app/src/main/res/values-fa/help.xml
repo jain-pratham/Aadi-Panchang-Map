@@ -3,8 +3,6 @@
 <string name="help_text" translation_description="This is the help text for the app Google Aadi Panchang Map. It includes placeholders where other text is inserted. Please do not change the &lt; and &gt; markup">
     &lt;h1&gt;نقشه آسمان برای اندروید&lt;/h1&gt;
 &lt;p class="version"&gt;نسخه %1$s&lt;/p&gt;
-&lt;p class="url"&gt;&lt;a href="https://stardroid.app"&gt;https://stardroid.app&lt;/a&gt;&lt;/p&gt;
-
 %4$s
 
 &lt;h2&gt;مقدمه و شروع سریع&lt;/h2&gt;
@@ -161,7 +159,7 @@
 &lt;li&gt;اگر گوشی شما ژیروسکوپ ندارد، &lt;b&gt;غیرفعال کردن ژیروسکوپ&lt;/b&gt; را در تنظیمات حسگر فعال کنید&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;برای جزئیات کامل عیب‌یابی، به راهنمای &lt;a href="https://github.com/sky-map-team/stardroid/blob/master/troubleshooting.md"&gt;عیب‌یابی&lt;/a&gt; آنلاین مراجعه کنید.&lt;/p&gt;
-&lt;p class="callout"&gt;اگر هنوز مشکل دارید، به ما در skymapdevs@gmail.com ایمیل بزنید — یک اسکرین‌شات از صفحه عیب‌یابی شما بسیار مفید است.&lt;/p&gt;
+&lt;p class="callout"&gt;اگر هنوز مشکل دارید، به ما در jainpratham4050@gmail.com ایمیل بزنید — یک اسکرین‌شات از صفحه عیب‌یابی شما بسیار مفید است.&lt;/p&gt;
 
 &lt;h1&gt;چه چیزی در نقشه آسمان جدید است؟&lt;/h1&gt;
 
