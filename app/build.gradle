@@ -38,7 +38,7 @@ android {
      * The app's namespace. Used primarily to access app resources.
      */
 
-    namespace = 'com.google.android.stardroid'
+    namespace = 'com.aadipanchang.map'
 
     /**
      * compileSdk specifies the Android API level Gradle should use to
@@ -57,12 +57,12 @@ android {
 
     defaultConfig {
         // Uniquely identifies the package for publishing.
-        applicationId 'com.google.android.stardroid'
+        applicationId 'com.aadipanchang.map'
         minSdk 26
         targetSdk 36
         versionCode 1670
         versionName "1.15.0:Saturn"
-        testInstrumentationRunner "com.google.android.stardroid.test.HiltTestRunner"
+        testInstrumentationRunner "com.aadipanchang.map.test.HiltTestRunner"
         resourceConfigurations += ['en', 'b+en+GB', 'ar', 'ca', 'cs', 'cy', 'da', 'de', 'el', 'es', 'fa', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'ms', 'nb', 'nl', 'pl', 'pt', 'ru', 'sk', 'sl', 'sv', 'th', 'tr', 'uk', 'b+zh+Hans', 'b+zh+Hant']
         manifestPlaceholders = [dummy: "unset"]
         resValue "string", "geoapify_maps_api_key", "unset"

@@ -2,8 +2,4 @@ Aadi Panchang Map உங்களுக்கு நிஜ நேரத்தி
 
 முதலில் Google Aadi Panchang Map ஆக உருவாக்கப்பட்டது, இப்போது இது திறந்த மூல மென்பொருள்.
 <h3>எங்களை இணையத்தில் கண்டறியுங்கள்:</h3>
-⭐ <b>அதிகாரப்பூர்வ இணையதளம்:</b> <u><a href="https://stardroid.app">stardroid.app</a></u>
-⭐ <b>திறந்த மூல:</b> <u><a href="https://github.com/sky-map-team/stardroid">GitHub இல் பங்களிக்கவும்</a></u>
 ⭐ <b>சமூகத்தில் சேரவும்:</b>
-&nbsp;&nbsp;&nbsp; • <u><a href="https://www.facebook.com/groups/stardroidapp/">Facebook @stardroidapp</a></u>
-&nbsp;&nbsp;&nbsp; • <u><a href="http://x.com/skymapdevs">X @skymapdevs</a></u>

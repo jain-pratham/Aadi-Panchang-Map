@@ -92,7 +92,7 @@
 
         </LinearLayout>
         <!--  The layers/providers button -->
-        <com.google.android.stardroid.views.ButtonLayerView
+        <com.aadipanchang.map.views.ButtonLayerView
             android:id="@+id/layer_buttons_control"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             android:orientation="vertical"
             stardroid:fade_time="500">
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -113,7 +113,7 @@
                 stardroid:image_on="@drawable/star_on"
                 stardroid:pref_key="source_provider.0" />
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -125,7 +125,7 @@
                 stardroid:image_on="@drawable/stars_on"
                 stardroid:pref_key="source_provider.1" />
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -137,7 +137,7 @@
                 stardroid:image_on="@drawable/deep_sky_objects_on"
                 stardroid:pref_key="source_provider.2" />
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -149,7 +149,7 @@
                 stardroid:image_on="@drawable/planet_on"
                 stardroid:pref_key="source_provider.3" />
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -160,7 +160,7 @@
                 stardroid:image_off="@drawable/b_meteor_off"
                 stardroid:image_on="@drawable/b_meteor_on"
                 stardroid:pref_key="source_provider.6" />
-            <!--com.google.android.stardroid.views.PreferencesButton
+            <!--com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="7px"
@@ -170,7 +170,7 @@
                 stardroid:pref_key="@string/show_satellite_layer_pref"
                 stardroid:image_on="@drawable/b_iss_on"
                 stardroid:image_off="@drawable/b_iss_off" /-->
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -182,7 +182,7 @@
                 stardroid:image_on="@drawable/grid_on"
                 stardroid:pref_key="source_provider.4" />
 
-            <com.google.android.stardroid.views.PreferencesButton
+            <com.aadipanchang.map.views.PreferencesButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -193,7 +193,7 @@
                 stardroid:image_off="@drawable/horizon_off"
                 stardroid:image_on="@drawable/horizon_on"
                 stardroid:pref_key="source_provider.5" />
-        </com.google.android.stardroid.views.ButtonLayerView>
+        </com.aadipanchang.map.views.ButtonLayerView>
 
         <!-- Manual/auto button -->
         <RelativeLayout
@@ -207,7 +207,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom">
 
-                <com.google.android.stardroid.views.ButtonLayerView
+                <com.aadipanchang.map.views.ButtonLayerView
                     android:id="@+id/layer_manual_auto_toggle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
                         android:contentDescription="Toggle Language"
                         android:clickable="true" />
 
-                    <com.google.android.stardroid.views.PreferencesButton
+                    <com.aadipanchang.map.views.PreferencesButton
                         android:id="@+id/manual_auto_toggle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                         stardroid:image_off="@drawable/automaticmode"
                         stardroid:image_on="@drawable/manualmode"
                         stardroid:pref_key="auto_mode" />
-                </com.google.android.stardroid.views.ButtonLayerView>
+                </com.aadipanchang.map.views.ButtonLayerView>
             </FrameLayout>
         </RelativeLayout>
     </FrameLayout>

@@ -1,1 +1,1 @@
-adb uninstall com.google.android.stardroid
+adb uninstall com.aadipanchang.map

@@ -35,7 +35,7 @@ dependencies {
 // So instead we create one monster that can do it all.
 application {
     applicationName = "datagen"
-    mainClass = "com.google.android.stardroid.data.Main"
+    mainClass = "com.aadipanchang.map.data.Main"
 }
 
 java {

@@ -1,11 +1,11 @@
 # The package name of your app
-app_package_name('com.google.android.stardroid')
+app_package_name('com.aadipanchang.map')
 
 # The package name of your test suite
-tests_package_name('com.google.android.stardroid.test')
+tests_package_name('com.aadipanchang.map.test')
 
 # Crucial for modern Android projects
-test_instrumentation_runner('com.google.android.stardroid.test.HiltTestRunner')
+test_instrumentation_runner('com.aadipanchang.map.test.HiltTestRunner')
 
 # The locales you want to capture (matches your metadata folders)
 locales(['ar','fa'

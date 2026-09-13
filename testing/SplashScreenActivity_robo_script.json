@@ -136,20 +136,20 @@
         "canScrollTo": false,
         "elementDescriptors": [
           {
-            "className": "com.google.android.stardroid.views.PreferencesButton",
+            "className": "com.aadipanchang.map.views.PreferencesButton",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/manual_auto_toggle",
+            "resourceId": "com.aadipanchang.map:id/manual_auto_toggle",
             "contentDescription": "",
             "text": ""
           },
           {
-            "className": "com.google.android.stardroid.views.ButtonLayerView",
+            "className": "com.aadipanchang.map.views.ButtonLayerView",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/layer_manual_auto_toggle",
+            "resourceId": "com.aadipanchang.map:id/layer_manual_auto_toggle",
             "contentDescription": "",
             "text": ""
           },
@@ -158,7 +158,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/manual_bar",
+            "resourceId": "com.aadipanchang.map:id/manual_bar",
             "contentDescription": "",
             "text": ""
           }
@@ -173,20 +173,20 @@
         "canScrollTo": false,
         "elementDescriptors": [
           {
-            "className": "com.google.android.stardroid.views.PreferencesButton",
+            "className": "com.aadipanchang.map.views.PreferencesButton",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/manual_auto_toggle",
+            "resourceId": "com.aadipanchang.map:id/manual_auto_toggle",
             "contentDescription": "",
             "text": ""
           },
           {
-            "className": "com.google.android.stardroid.views.ButtonLayerView",
+            "className": "com.aadipanchang.map.views.ButtonLayerView",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/layer_manual_auto_toggle",
+            "resourceId": "com.aadipanchang.map:id/layer_manual_auto_toggle",
             "contentDescription": "",
             "text": ""
           },
@@ -195,7 +195,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/manual_bar",
+            "resourceId": "com.aadipanchang.map:id/manual_bar",
             "contentDescription": "",
             "text": ""
           }
@@ -210,7 +210,7 @@
         "canScrollTo": false,
         "elementDescriptors": [
           {
-            "className": "com.google.android.stardroid.views.PreferencesButton",
+            "className": "com.aadipanchang.map.views.PreferencesButton",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
@@ -219,11 +219,11 @@
             "text": ""
           },
           {
-            "className": "com.google.android.stardroid.views.ButtonLayerView",
+            "className": "com.aadipanchang.map.views.ButtonLayerView",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 4,
-            "resourceId": "com.google.android.stardroid:id/layer_buttons_control",
+            "resourceId": "com.aadipanchang.map:id/layer_buttons_control",
             "contentDescription": "",
             "text": ""
           },
@@ -232,7 +232,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/main_sky_view",
+            "resourceId": "com.aadipanchang.map:id/main_sky_view",
             "contentDescription": "",
             "text": ""
           }
@@ -247,7 +247,7 @@
         "canScrollTo": false,
         "elementDescriptors": [
           {
-            "className": "com.google.android.stardroid.views.PreferencesButton",
+            "className": "com.aadipanchang.map.views.PreferencesButton",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
@@ -256,11 +256,11 @@
             "text": ""
           },
           {
-            "className": "com.google.android.stardroid.views.ButtonLayerView",
+            "className": "com.aadipanchang.map.views.ButtonLayerView",
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 4,
-            "resourceId": "com.google.android.stardroid:id/layer_buttons_control",
+            "resourceId": "com.aadipanchang.map:id/layer_buttons_control",
             "contentDescription": "",
             "text": ""
           },
@@ -269,7 +269,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/main_sky_view",
+            "resourceId": "com.aadipanchang.map:id/main_sky_view",
             "contentDescription": "",
             "text": ""
           }
@@ -288,7 +288,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 1,
-            "resourceId": "com.google.android.stardroid:id/menu_item_dim",
+            "resourceId": "com.aadipanchang.map:id/menu_item_dim",
             "contentDescription": "Toggle night mode",
             "text": ""
           },
@@ -325,7 +325,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 0,
-            "resourceId": "com.google.android.stardroid:id/menu_item_search",
+            "resourceId": "com.aadipanchang.map:id/menu_item_search",
             "contentDescription": "Search",
             "text": ""
           },
@@ -436,7 +436,7 @@
             "recyclerViewChildPosition": -1,
             "adapterViewChildPosition": -1,
             "groupViewChildPosition": 1,
-            "resourceId": "com.google.android.stardroid:id/menu_item_dim",
+            "resourceId": "com.aadipanchang.map:id/menu_item_dim",
             "contentDescription": "Toggle night mode",
             "text": ""
           },

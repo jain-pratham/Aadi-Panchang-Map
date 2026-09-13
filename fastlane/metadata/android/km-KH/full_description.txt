@@ -2,8 +2,4 @@ Aadi Panchang Map ជួយអ្នកក្នុងការកំណត់�
 
 ដែលបានបង្កើតដំបូងដោយ Google Aadi Panchang Map ឥឡូវនេះវាគឺជាកម្មវិធីលិខិតបើកចំហ។
 <h3>ស្វាគមន៍មក រកយើងលើអ៊ីនធឺណេត៖</h3>
-⭐ <b>គេហទំព័រផ្លូវការ៖</b> <u><a href="https://stardroid.app">stardroid.app</a></u>
-⭐ <b>លិខិតបើកចំហ៖</b> <u><a href="https://github.com/sky-map-team/stardroid">ចូលរួម GitHub</a></u>
 ⭐ <b>ចូលរួមក្រុមសហគមន៍៖</b>
-&nbsp;&nbsp;&nbsp; • <u><a href="https://www.facebook.com/groups/stardroidapp/">Facebook @stardroidapp</a></u>
-&nbsp;&nbsp;&nbsp; • <u><a href="http://x.com/skymapdevs">X @skymapdevs</a></u>

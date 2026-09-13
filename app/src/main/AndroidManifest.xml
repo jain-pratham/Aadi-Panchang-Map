@@ -91,7 +91,7 @@
         <!-- Provides search suggestions. -->
         <provider
             android:name=".search.SearchTermsProvider"
-            android:authorities="com.google.android.stardroid.searchterms"
+            android:authorities="com.aadipanchang.map.searchterms"
             android:exported="false"
             android:syncable="false"/>
 
