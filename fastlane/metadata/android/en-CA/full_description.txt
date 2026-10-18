@@ -1,3 +1,19 @@
-Aadi Panchang Map helps you identify stars, planets, nebulae, and constellations in real-time.
+<b>Turn your Android device into a window to the cosmos.</b>
 
-⭐ <b>Join the Community:</b>
+Aadi Panchang Map is a planetarium app that helps you identify stars, planets, nebulae, constellations, and Vedic Nakshatras in real time. Point your device at the sky to explore celestial objects.
+
+<h3>⭐ Features</h3>
+• <b>Point & Identify:</b> Use your phone's sensors to explore the sky in the direction you are facing.
+• <b>Explore the Cosmos:</b> View stars, solar system objects, constellations, and deep-sky objects.
+• <b>Vedic Nakshatra Layer:</b> Explore the 28 Nakshatras mapped along the sidereal ecliptic using Lahiri Ayanamsa, with English and Hindi labels.
+• <b>Guided Search:</b> Search for supported celestial objects and follow the on-screen directional arrow.
+• <b>Object Information:</b> Tap supported objects to view available astronomical information.
+• <b>Time Travel:</b> Explore how the sky appears at different dates.
+• <b>Night Mode:</b> Use a red-filtered display for night-time observation.
+• <b>Open Source:</b> Review the project's source code and contribute through GitHub.
+
+<h3>⭐ Attribution & Open Source</h3>
+Aadi Panchang Map is an independent open-source derivative of the Sky Map project, originally open-sourced by Google in 2012, and independently maintained.
+
+Source code and issue reporting:
+https://github.com/jain-pratham/Aadi-Panchang-Map
