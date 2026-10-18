@@ -1,5 +1,3 @@
 Aadi Panchang Map te ajută să identifici stele, planete, nebuloase și constelații în timp real.
 
-Dezvoltat inițial ca Google Aadi Panchang Map, acum este open source.
-<h3>Găsește-ne online:</h3>
-⭐ <b>Alătură-te comunității:</b>
+Aadi Panchang Map este un derivat independent cu sursă deschisă al proiectului Sky Map. Proiectul original Sky Map a fost oferit ca open source de către Google în 2012. Aadi Panchang Map este întreținut în mod independent.

@@ -1,5 +1,3 @@
 Aadi Panchang Map, yıldızları, gezegenleri, nebülaları ve takımyıldızları gerçek zamanlı olarak tanımlamanıza yardımcı olur.
 
-Başlangıçta Google Aadi Panchang Map olarak geliştirilmiş, şimdi açık kaynaktır.
-<h3>Bizi çevrimiçi bulun:</h3>
-⭐ <b>Topluluğa Katılın:</b>
+Aadi Panchang Map, Sky Map projesinin bağımsız bir açık kaynak türevidir. Orijinal Sky Map projesi, 2012 yılında Google tarafından açık kaynak olarak kullanıma sunulmuştur. Aadi Panchang Map bağımsız olarak sürdürülmektedir.

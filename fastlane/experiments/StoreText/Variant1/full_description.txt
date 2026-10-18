@@ -8,8 +8,7 @@ planets, and constellations.
 ⭐ <b>Search the Universe:</b> Looking for Mars? Let the app guide your phone to it.
 ⭐ <b>Pure Exploration:</b> No ads, no tracking, and no bloat. Just the cosmos.
 
-Originally developed as Google Aadi Panchang Map, it is now maintained by an open-source
-community of enthusiasts.
+Aadi Panchang Map is an independent open-source derivative of the Sky Map project. The original Sky Map project was open-sourced by Google in 2012. Aadi Panchang Map is independently maintained.
 
 <h3>Find us online:</h3>
 ⭐ <b>Open Source:</b> <u><a href="https://github.com/sky-map-team/stardroid">Contribute on GitHub</a></u>

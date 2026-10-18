@@ -1,5 +1,3 @@
 Aadi Panchang Map palīdz identificēt zvaigznes, planētas, miglājes un zvaigznājumus reālajā laikā.
 
-Sākotnēji izstrādāts kā Google Aadi Panchang Map, tagad tas ir atvērtā koda programma.
-<h3>Atrodiet mūs tiešsaistē:</h3>
-⭐ <b>Pievienojieties kopienai:</b>
+Aadi Panchang Map ir neatkarīgs atvērtā pirmkoda atvasinājums no Sky Map projekta. Sākotnējo Sky Map projektu Google padarīja par atvērto pirmkodu 2012. gadā. Aadi Panchang Map tiek uzturēts neatkarīgi.

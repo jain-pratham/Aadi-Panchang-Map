@@ -1,5 +1,3 @@
 Aadi Panchang Map aitab teil tuvastada tähti, planeete, udukogusid ja tähtkujusid reaalajas.
 
-Algselt välja töötatud Google Aadi Panchang Mapina, on see nüüd avatud lähtekoodiga.
-<h3>Leidke meid veebist:</h3>
-⭐ <b>Liituge kogukonnaga:</b>
+Aadi Panchang Map on projekti Sky Map sõltumatu avatud lähtekoodiga tuletis. Algse Sky Map projekti muutis Google avatud lähtekoodiga projektiks 2012. aastal. Aadi Panchang Mapi hallatakse iseseisvalt.

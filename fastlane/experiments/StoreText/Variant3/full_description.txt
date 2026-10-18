@@ -1,7 +1,5 @@
 <b>The original Aadi Panchang Map, kept simple.</b>
-Aadi Panchang Map remains the cleanest way to explore the stars. Originally built by
-Google and now powered by the community, it provides a fast, ad-free experience
-that focuses on what matters: the sky.
+Aadi Panchang Map remains the cleanest way to explore the stars. Based on the original Sky Map project open-sourced by Google in 2012 and now independently maintained, it provides a fast, ad-free experience that focuses on what matters: the sky.
 
 <h3>Key Features:</h3>
 ⭐ <b>Automatic Tracking:</b> The display moves with you, showing exactly what's in your line of sight.

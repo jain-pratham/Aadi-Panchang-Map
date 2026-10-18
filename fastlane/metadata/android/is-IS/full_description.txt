@@ -1,5 +1,3 @@
 Aadi Panchang Map hjálpar þér að bera kennsl á stjörnur, plánetur, þokuflota og stjörnumerki í rauntíma.
 
-Upphaflega þróað sem Google Aadi Panchang Map, er það nú opinn hugbúnaður.
-<h3>Finndu okkur á netinu:</h3>
-⭐ <b>Gantu þér í samfélagið:</b>
+Aadi Panchang Map er sjálfstæð afleiða af Sky Map verkefninu með opnum kóða. Upprunalega Sky Map verkefnið var gefið út sem opinn hugbúnaður af Google árið 2012. Aadi Panchang Map er viðhaldið sjálfstætt.

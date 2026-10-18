@@ -1,5 +1,3 @@
 Aadi Panchang Map auttaa sinua tunnistamaan tähtiä, planeettoja, sumuja ja tähtikuvioita reaaliajassa.
 
-Alun perin kehitetty Google Aadi Panchang Mapiksi, se on nyt avoimen lähdekoodin sovellus.
-<h3>Löydä meidät verkosta:</h3>
-⭐ <b>Liity yhteisöön:</b>
+Aadi Panchang Map on itsenäinen avoimen lähdekoodin johdannainen Sky Map -projektista. Alkuperäinen Sky Map -projekti julkaistiin avoimena lähdekoodina Googlen toimesta vuonna 2012. Aadi Panchang Mapia ylläpidetään itsenäisesti.

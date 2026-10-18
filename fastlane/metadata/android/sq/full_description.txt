@@ -1,5 +1,3 @@
 Aadi Panchang Map ju ndihmon të identifikoni yje, planeta, nebula dhe yjësi në kohë reale.
 
-Zhvilluar fillimisht si Google Aadi Panchang Map, tani është me kod të hapur.
-<h3>Gjeni ne në internet:</h3>
-⭐ <b>Bashkohuni me Komunitetin:</b>
+Aadi Panchang Map është një derivat i pavarur me kod të hapur i projektit Sky Map. Projekti origjinal Sky Map u bë me kod të hapur nga Google në vitin 2012. Aadi Panchang Map mirëmbahet në mënyrë të pavarur.

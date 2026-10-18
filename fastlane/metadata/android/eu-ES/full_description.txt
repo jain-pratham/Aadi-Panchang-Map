@@ -1,5 +1,3 @@
 Aadi Panchang Map-ek errealean izarrak, planetak, nebulosa eta konstelazioak identifikatzen laguntzen dizu.
 
-Jatorrian Google Aadi Panchang Map gisa garatua, orain iturburu irekia da.
-<h3>Aurkitu gaitezela online:</h3>
-⭐ <b>Batu komunitatea:</b>
+Aadi Panchang Map Sky Map proiektuaren iturburu irekiko deribatu independente bat da. Jatorrizko Sky Map proiektua Googlek iturburu irekian askatu zuen 2012an. Aadi Panchang Map modu independentean mantentzen da.

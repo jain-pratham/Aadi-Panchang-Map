@@ -1,5 +1,3 @@
 Aadi Panchang Map vam pomaga prepoznati zvezde, planete, meglice in ozvezdja v realnem času.
 
-Prvotno razvit kot Google Aadi Panchang Map, je zdaj odprtokoden.
-<h3>Poiščite nas na spletu:</h3>
-⭐ <b>Pridružite se skupnosti:</b>
+Aadi Panchang Map je neodvisna odprtokodna izpeljanka projekta Sky Map. Prvotni projekt Sky Map je Google leta 2012 izdal kot odprtokodni projekt. Aadi Panchang Map se vzdržuje neodvisno.

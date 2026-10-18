@@ -1,5 +1,3 @@
 Aadi Panchang Map sizə ulduzları, planetləri, tumanları və bürcləri real vaxtda tanımağa kömək edir.
 
-Əvvəlcə Google Aadi Panchang Map olaraq hazırlanmış, indi açıq mənbədir.
-<h3>Bizi onlayn tapın:</h3>
-⭐ <b>Cəmiyyətə Qoşulun:</b>
+Aadi Panchang Map Sky Map layihəsinin müstəqil açıq mənbəli törəməsidir. Orijinal Sky Map layihəsi 2012-ci ildə Google tərəfindən açıq mənbəli edilmişdir. Aadi Panchang Map müstəqil şəkildə idarə olunur.
