@@ -1,3 +1,0 @@
-Aadi Panchang Map ay tumutulong sa iyo na matukoy ang mga bituin, planeta, nebula, at konstelasyon sa real-time.
-
-Ang Aadi Panchang Map ay isang independiyenteng open-source na derivative ng proyektong Sky Map. Ang orihinal na proyektong Sky Map ay ginawang open-source ng Google noong 2012. Ang Aadi Panchang Map ay independiyenteng pinapanatili.

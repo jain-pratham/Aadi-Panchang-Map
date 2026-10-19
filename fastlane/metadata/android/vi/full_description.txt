@@ -1,3 +1,0 @@
-Aadi Panchang Map giúp bạn xác định các ngôi sao, hành tinh, tinh vân và chòm sao trong thời gian thực.
-
-Aadi Panchang Map là một sản phẩm phái sinh mã nguồn mở độc lập từ dự án Sky Map. Dự án Sky Map gốc đã được Google mở mã nguồn vào năm 2012. Aadi Panchang Map được duy trì một cách độc lập.

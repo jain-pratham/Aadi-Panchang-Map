@@ -1,3 +1,0 @@
-Aadi Panchang Mapは、リアルタイムで星、惑星、星雲、星座を識別するのに役立ちます。
-
-Aadi Panchang Mapは、Sky Mapプロジェクトから派生した独立したオープンソースソフトウェアです。オリジナルのSky Mapプロジェクトは2012年にGoogleによってオープンソース化されました。Aadi Panchang Mapは独立して保守・管理されています。

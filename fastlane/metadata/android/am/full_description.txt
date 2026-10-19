@@ -1,3 +1,0 @@
-Aadi Panchang Map ከእውነተኛ ጊዜ ጋር ከዋክብት፣ ፕላኔቶች፣ ኔቡላ እና ህብረ ከዋክብትን ለመለየት ይረዳዎታል።
-
-Aadi Panchang Map ከSky Map ፕሮጀክት የተገኘ ራሱን የቻለ ክፍት ምንጭ (open-source) ውጤት ነው። የመጀመሪያው የSky Map ፕሮጀክት በ2012 በGoogle ክፍት ምንጭ ሆኖ ተለቋል። Aadi Panchang Map ራሱን ችሎ የሚተዳደር ነው።

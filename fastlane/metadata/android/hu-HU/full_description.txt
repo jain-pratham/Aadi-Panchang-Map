@@ -1,3 +1,0 @@
-Aadi Panchang Map segít azonosítani a csillagokat, bolygókat, ködöket és csillagképeket valós időben.
-
-Az Aadi Panchang Map a Sky Map projekt független, nyílt forráskódú származéka. Az eredeti Sky Map projektet a Google 2012-ben tette nyílt forráskódúvá. Az Aadi Panchang Map fenntartása függetlenül történik.

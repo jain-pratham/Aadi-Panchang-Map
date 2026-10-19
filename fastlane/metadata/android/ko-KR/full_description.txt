@@ -1,3 +1,0 @@
-Aadi Panchang Map는 실시간으로 별, 행성, 성운, 별자리를 식별하는 데 도움을 줍니다.
-
-Aadi Panchang Map은 Sky Map 프로젝트의 독립적인 오픈 소스 파생 프로젝트입니다. 오리지널 Sky Map 프로젝트는 2012년에 Google에 의해 오픈 소스로 공개되었습니다. Aadi Panchang Map은 독립적으로 유지 관리됩니다.

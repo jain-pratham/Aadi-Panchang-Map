@@ -1,3 +1,0 @@
-Aadi Panchang Map 幫助您實時識別星星、行星、星雲和星座。
-
-Aadi Panchang Map 是 Sky Map 專案的獨立開源衍生版本。原始 Sky Map 專案由 Google 於 2012 年開源。Aadi Panchang Map 由獨立社群維護。

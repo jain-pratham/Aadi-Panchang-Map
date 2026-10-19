@@ -1,3 +1,0 @@
-Aadi Panchang Map padeda jums nustatyti žvaigždes, planetas, ūkus ir žvaigždynus realiuoju laiku.
-
-„Aadi Panchang Map“ yra nepriklausoma atvirojo kodo projekto „Sky Map“ atmaina. Pradinį „Sky Map“ projektą „Google“ išleido kaip atvirąjį kodą 2012 m. „Aadi Panchang Map“ yra palaikomas nepriklausomai.
