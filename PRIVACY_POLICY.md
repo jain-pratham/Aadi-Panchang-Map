@@ -19,7 +19,7 @@ We respect your privacy and design our application to operate with minimal data 
 Depending on your device permissions and the specific build variant of the application (Google Play Services / GMS build vs. F-Droid build), Aadi Panchang Map may access the following on-device information:
 
 - **Approximate Geographic Location** (`ACCESS_COARSE_LOCATION`): Used to determine your viewing location for sky rendering.
-- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API) and feature configuration checks (Firebase Remote Config in the GMS build variant).
+- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API).
 - **Device Sensors**: Accesses accelerometer, magnetic field, and rotation vector sensors on-device to dynamically align the star map as you move your device.
 - **Device Wake Lock and Vibration**: Used to keep the screen active while viewing the star map and provide tactile feedback for UI interactions.
 
@@ -81,18 +81,16 @@ Information accessed by Aadi Panchang Map is used solely for the following purpo
 
 The application interacts with third-party service providers only as described below:
 
-- **Firebase Remote Config (GMS Build Only):** The GMS build utilizes Google Firebase Remote Config solely to check runtime feature configuration values (specifically the `warm_welcome_enabled` feature flag controlling onboarding display). When checking for configuration updates, the Firebase Remote Config SDK connects to Google infrastructure (`firebaseremoteconfig.googleapis.com`), transmitting standard client connection metadata (such as IP address, app package name, and device OS version) required by network protocols. Remote Config does not collect user behavior analytics or track user identity.
 - **Geoapify Maps API (Optional Runtime Service):** Used to load static location map preview tiles in Location Settings. This service is available in both GMS and F-Droid builds only if a Geoapify API key is configured at build time. When active, requests sent to `https://maps.geoapify.com` include center coordinates. If no API key is set (default `"unset"`), no network requests are sent.
 - **External Links & Browser Intents:** If you click on external links (such as celestial catalog reference pages, NASA/ESO image source credits, or troubleshooting links), those links open in your device's web browser and are governed by the privacy policies of the respective external websites.
 
-*Note: The application does not contain advertising SDKs (such as AdMob), analytics SDKs, third-party ad networks, social login SDKs, or third-party crash reporters (such as Crashlytics).*
+*Note: The application does not contain advertising SDKs (such as AdMob), analytics SDKs, remote configuration SDKs (such as Firebase Remote Config), third-party ad networks, social login SDKs, or third-party crash reporters (such as Crashlytics).*
 
 ---
 
 ## 9. Data Storage and Retention
 
 - **Local Device Storage:** All user preferences, layer toggles, and manual location coordinates are stored locally on your device using standard Android `SharedPreferences`. This data remains on your device until you uninstall the app or clear the app's data in Android System Settings.
-- **Remote Config Local Cache:** Firebase Remote Config maintains a local cache of configuration values on device storage to minimize network requests.
 
 ---
 
@@ -111,7 +109,7 @@ Aadi Panchang Map is a general-audience educational application for viewing cele
 
 ## 12. Security
 
-We take reasonable technical precautions within the design of Aadi Panchang Map to safeguard your information. Location processing for star mapping occurs on-device, and third-party network communications (Firebase Remote Config and Geoapify Maps API) use encrypted HTTPS connections. However, please be aware that no method of electronic transmission or storage can be guaranteed to be 100% secure.
+We take reasonable technical precautions within the design of Aadi Panchang Map to safeguard your information. Location processing for star mapping occurs on-device, and third-party network communications (Geoapify Maps API) use encrypted HTTPS connections. However, please be aware that no method of electronic transmission or storage can be guaranteed to be 100% secure.
 
 ---
 
