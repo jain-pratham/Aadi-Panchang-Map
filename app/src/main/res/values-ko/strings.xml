@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">별지도</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">설정</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">검색</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">취소</string>
@@ -19,7 +19,7 @@
     <string name="dialog_accept" translation_description="accepting the licence agreement">동의</string>
     <string name="dialog_decline" translation_description="declining the licence agreement">아니요</string>
     <string name="menu_help" translation_description="menu item to show \'Help\' box">도움말</string>
-    <string name="help_dialog_title" translation_description="Title of the help dialog">별지도 도움말</string>
+    <string name="help_dialog_title" translation_description="Title of the help dialog">Aadi Panchang Map 도움말</string>
     <string name="set_manual" translation_description="Toast message shown when the user switches to manual (touch-drag) mode">수동 모드로 전환</string>
     <string name="set_auto" translation_description="Toast message shown when the user switches to automatic (sensor/gyroscope) mode">자동 모드로 전환</string>
     <string name="menu_toggle_dim" translation_description="Menu item to toggle night mode (red tint that preserves night vision)">야간 모드 전환</string>

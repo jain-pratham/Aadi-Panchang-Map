@@ -1,7 +1,7 @@
-# .tmconfig.toml — Sky Map (stardroid)
+# .tmconfig.toml — Aadi Panchang Map
 
 [app]
-name = "Sky Map"
+name = "Aadi Panchang Map"
 description = "a mobile astronomy/planetarium application for Android. Use your astronomy expertise to ensure that astronomical terms like constellation names are correct in the new locale"
 primary_languages = [
     "sk", "cy", "pt", "ar", "en-GB", "zh-Hant",
@@ -17,7 +17,7 @@ invent phonetic transliterations or literal translations of English names. If no
 established translated name exists, retain the Latin or catalog designation \
 (e.g. "NGC 4755") rather than guessing.
 
-The app name "Sky Map" and the platform name "Android" must never be translated or \
+The app name "Aadi Panchang Map" and the platform name "Android" must never be translated or \
 transliterated, regardless of language. Preserve them exactly as English text in \
 every locale, including languages that use non-Latin scripts (Arabic, Hindi, Thai, \
 Japanese, Chinese, etc.).

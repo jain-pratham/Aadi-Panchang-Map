@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">نقشه‌ی آسمان</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">تنظیمات</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">جستجو</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">لغو</string>

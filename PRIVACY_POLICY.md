@@ -19,7 +19,7 @@ We respect your privacy and design our application to operate with minimal data 
 Depending on your device permissions and the specific build variant of the application (Google Play Services / GMS build vs. F-Droid build), Aadi Panchang Map may access the following on-device information:
 
 - **Approximate Geographic Location** (`ACCESS_COARSE_LOCATION`): Used to determine your viewing location for sky rendering.
-- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API).
+- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API). As with any standard internet communication, establishing a network connection inherently transmits your device's IP address to the destination server (Geoapify).
 - **Device Sensors**: Accesses accelerometer, magnetic field, and rotation vector sensors on-device to dynamically align the star map as you move your device.
 - **Device Wake Lock and Vibration**: Used to keep the screen active while viewing the star map and provide tactile feedback for UI interactions.
 
@@ -33,7 +33,7 @@ Aadi Panchang Map requires location context to compute and display accurate astr
 - **Approximate Location Only:** The application requests approximate location permission (`ACCESS_COARSE_LOCATION`). It does not request precise GPS location permission (`ACCESS_FINE_LOCATION`).
 - **Manual Location Option:** You can choose to deny location permission or manually configure/override your location by entering city names or geographic coordinates within the app settings.
 - **No Location Tracking:** No analytics or telemetry SDKs exist to record, transmit, or monitor your location.
-- **Optional Static Map Preview:** If a Geoapify API key is configured and you view the Location Management map screen, latitude/longitude coordinates are sent directly to Geoapify static map servers (`maps.geoapify.com`) to display a location preview tile. If no API key is configured (the default build setting), no map tile requests are made.
+- **Optional Static Map Preview:** If a Geoapify API key is configured and you view the Location Management map screen, your confirmed location coordinates (latitude and longitude) are sent directly to Geoapify static map servers (`maps.geoapify.com`) to display a location preview tile. Because this is a standard HTTPS network request, your device's Internet Protocol (IP) address is inherently transmitted to Geoapify as a technical necessity of internet communication. Aadi Panchang Map does not collect, track, or store your IP address. If no API key is configured (the default build setting), no map tile requests are made and no data is transmitted.
 
 ---
 
@@ -81,7 +81,7 @@ Information accessed by Aadi Panchang Map is used solely for the following purpo
 
 The application interacts with third-party service providers only as described below:
 
-- **Geoapify Maps API (Optional Runtime Service):** Used to load static location map preview tiles in Location Settings. This service is available in both GMS and F-Droid builds only if a Geoapify API key is configured at build time. When active, requests sent to `https://maps.geoapify.com` include center coordinates. If no API key is set (default `"unset"`), no network requests are sent.
+- **Geoapify Maps API (Optional Runtime Service):** Used to load static location map preview tiles in Location Settings. This service is available in both GMS and F-Droid builds only if a Geoapify API key is configured at build time. When active, requests sent to `https://maps.geoapify.com` include the confirmed center coordinates (latitude and longitude) to render the preview tile. In addition, Geoapify receives the client's IP address as an inherent part of standard HTTP/HTTPS internet transmission; the application itself does not record, log, or store your IP address. If no API key is set (default `"unset"`), no network requests are sent.
 - **External Links & Browser Intents:** If you click on external links (such as celestial catalog reference pages, NASA/ESO image source credits, or troubleshooting links), those links open in your device's web browser and are governed by the privacy policies of the respective external websites.
 
 *Note: The application does not contain advertising SDKs (such as AdMob), analytics SDKs, remote configuration SDKs (such as Firebase Remote Config), third-party ad networks, social login SDKs, or third-party crash reporters (such as Crashlytics).*

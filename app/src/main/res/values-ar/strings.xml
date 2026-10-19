@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">خريطة السماء</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">الإعدادات</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">بحث</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">إلغاء</string>
@@ -81,7 +81,7 @@
     <string name="menu_credits" translation_description="menu item to show \'Credits\' box">الاعتمادات</string>
     <string name="credits_dialog_title" translation_description="Title of the credits dialog showing acknowledgements and contributors">الاعتمادات</string>
     <string name="menu_help" translation_description="menu item to show \'Help\' box">مساعدة</string>
-    <string name="help_dialog_title" translation_description="Title of the help dialog">مساعدة خريطة السماء</string>
+    <string name="help_dialog_title" translation_description="Title of the help dialog">مساعدة Aadi Panchang Map</string>
     <string name="set_manual" translation_description="Toast message shown when the user switches to manual (touch-drag) mode">التحويل إلى الوضع اليدوي</string>
     <string name="set_auto" translation_description="Toast message shown when the user switches to automatic (sensor/gyroscope) mode">التحويل إلى الوضع التلقائي</string>
     <string name="menu_toggle_dim" translation_description="Menu item to toggle night mode (red tint that preserves night vision)">تفعيل الوضع الليلي</string>

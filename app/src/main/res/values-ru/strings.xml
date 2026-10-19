@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">Карта звездного неба</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">Настройки</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">Поиск</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">Отмена</string>
@@ -20,7 +20,7 @@
     <string name="dialog_accept" translation_description="accepting the licence agreement">Принять</string>
     <string name="dialog_decline" translation_description="declining the licence agreement">Нет, спасибо</string>
     <string name="menu_help" translation_description="menu item to show \'Help\' box">Справка</string>
-    <string name="help_dialog_title" translation_description="Title of the help dialog">Справка Карты звездного неба</string>
+    <string name="help_dialog_title" translation_description="Title of the help dialog">Справка Aadi Panchang Map</string>
     <string name="set_manual" translation_description="Toast message shown when the user switches to manual (touch-drag) mode">Переключение в ручной режим</string>
     <string name="set_auto" translation_description="Toast message shown when the user switches to automatic (sensor/gyroscope) mode">Перекл. в авт. режим</string>
     <string name="menu_toggle_dim" translation_description="Menu item to toggle night mode (red tint that preserves night vision)">Ночной режим вкл./выкл.</string>

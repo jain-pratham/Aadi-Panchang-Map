@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">星空圖</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">設定</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">搜尋</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">取消</string>
@@ -79,7 +79,7 @@
     <string name="menu_credits" translation_description="menu item to show \'Credits\' box">致謝</string>
     <string name="credits_dialog_title" translation_description="Title of the credits dialog showing acknowledgements and contributors">致謝</string>
     <string name="menu_help" translation_description="menu item to show \'Help\' box">說明</string>
-    <string name="help_dialog_title" translation_description="Title of the help dialog">星空圖說明</string>
+    <string name="help_dialog_title" translation_description="Title of the help dialog">Aadi Panchang Map 說明</string>
     <string name="set_manual" translation_description="Toast message shown when the user switches to manual (touch-drag) mode">正在切換至手動模式</string>
     <string name="set_auto" translation_description="Toast message shown when the user switches to automatic (sensor/gyroscope) mode">正在切換至自動模式</string>
     <string name="menu_toggle_dim" translation_description="Menu item to toggle night mode (red tint that preserves night vision)">切換至夜間模式</string>

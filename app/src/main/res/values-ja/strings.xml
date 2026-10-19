@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Please add  translation_description="" attributes to Strings to assist the translators. --><resources>
-    <string name="app_name" translation_description="Application Title">Skyマップ</string>
+    <string name="app_name" translation_description="Application Title">Aadi Panchang Map</string>
     <string name="menu_settings" translation_description="Settings menu item in the options menu">設定</string>
     <string name="menu_search" translation_description="Search menu item in the options menu">検索</string>
     <string name="cancel" translation_description="Generic cancel button label used in dialogs">キャンセル</string>
@@ -81,7 +81,7 @@
     <string name="menu_credits" translation_description="menu item to show \'Credits\' box">クレジット</string>
     <string name="credits_dialog_title" translation_description="Title of the credits dialog showing acknowledgements and contributors">クレジット</string>
     <string name="menu_help" translation_description="menu item to show \'Help\' box">ヘルプ</string>
-    <string name="help_dialog_title" translation_description="Title of the help dialog">Skyマップのヘルプ</string>
+    <string name="help_dialog_title" translation_description="Title of the help dialog">Aadi Panchang Map のヘルプ</string>
     <string name="set_manual" translation_description="Toast message shown when the user switches to manual (touch-drag) mode">手動モードに切り替え中</string>
     <string name="set_auto" translation_description="Toast message shown when the user switches to automatic (sensor/gyroscope) mode">自動モードに切り替え中</string>
     <string name="menu_toggle_dim" translation_description="Menu item to toggle night mode (red tint that preserves night vision)">夜間モードの切り替え</string>
@@ -220,13 +220,13 @@
     <string name="compass_calibration_activity_warning" translation_description="Heading/reason text shown in the compass calibration dialog when it opens automatically due to low accuracy">スマートフォンのコンパスの調整が必要です</string>
     <string name="compass_calibration_activity_user_heading" translation_description="Heading shown in the compass calibration dialog when the user opens it manually from the menu">スマートフォンのコンパス</string>
     <string name="compass_calib_what_to_do" translation_description="Information for the user on how to calibrate the compass when the dialog auto-opens. Placeholder is the video URL"><![CDATA[このデバイスは、
-        内部コンパスがキャリブレーションされていないとSkyマップに報告しています。
-    これはSkyマップの問題ではないですが、修正を助けることは出来ます。コンパスをキャリブレーションするには、この動画%sで示しているように、精度が「高」になるまで
+        内部コンパスがキャリブレーションされていないとAadi Panchang Mapに報告しています。
+    これはAadi Panchang Mapの問題ではないですが、修正を助けることは出来ます。コンパスをキャリブレーションするには、この動画%sで示しているように、精度が「高」になるまで
         デバイスを8の字に動かしてください。]]></string>
     <string name="compass_calib_what_to_do_user" translation_description="Information for the user on how to calibrate the compass when they invoke the calibration dialog. Placeholder is the video URL"><![CDATA[このデバイスの
         コンパスの精度は上に
         表示しています。
-    表示が「高」でない場合、コンパスはキャリブレーションが必要かもしれません。これはSkyマップの問題ではなく、デバイスの
+    表示が「高」でない場合、コンパスはキャリブレーションが必要かもしれません。これはAadi Panchang Mapの問題ではなく、デバイスの
     機能です。コンパスをキャリブレーションするには、この動画%sで示しているように、
         デバイスを8の字に動かしてください。]]></string>
     <string name="compass_low_accuracy_toast" translation_description="Brief toast shown when compass accuracy is low and the user has disabled the calibration dialog">スマートフォンのコンパスの精度が低下しています</string>
@@ -235,7 +235,7 @@
     <string name="whats_new_dialog_title" translation_description="Title of the dialog shown on first launch after an update, listing new features">更新情報</string>
     <string name="disable_gyro_preference_title" translation_description="Preference title for disabling the gyroscope sensor">ジャイロスコープを無効にする</string>
     <string name="disable_gyro_preference_summary" translation_description="Explanation of the disable gyroscope preference and when to use it">
-    ジャイロのないデバイスもあります - あるデバイスの場合はそれを有効にしてチェックを外すことでより良い結果が得られます。一方、デバイスにジャイロがない場合は、このチェックを外すとおそらくSkyマップは動作しないでしょう。
+    ジャイロのないデバイスもあります - あるデバイスの場合はそれを有効にしてチェックを外すことでより良い結果が得られます。一方、デバイスにジャイロがない場合は、このチェックを外すとおそらくAadi Panchang Mapは動作しないでしょう。
     </string>
     <string name="rotate_horizon_preference_title" translation_description="Preference title for choosing the view/pointing direction mode">方向を見る</string>
     <string name="auto_level_horizon_preference_title" translation_description="Preference title for the auto-level horizon feature in manual mode">地平線の自動水平化</string>
