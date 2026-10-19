@@ -27,7 +27,6 @@ import com.aadipanchang.map.activities.util.ActivityLightLevelChanger;
 import com.aadipanchang.map.activities.util.NightModeHelper;
 import com.aadipanchang.map.activities.util.ActivityLightLevelManager;
 import com.aadipanchang.map.activities.util.EdgeToEdgeFixer;
-import com.aadipanchang.map.util.Analytics;
 import com.aadipanchang.map.util.MiscUtil;
 
 import dagger.hilt.EntryPoint;
@@ -45,7 +44,6 @@ public class EditSettingsActivity extends PreferenceActivity
   @EntryPoint
   @InstallIn(SingletonComponent.class)
   interface EditSettingsEntryPoint {
-    Analytics analytics();
     SharedPreferences sharedPreferences();
   }
 
@@ -67,7 +65,6 @@ public class EditSettingsActivity extends PreferenceActivity
 
   private boolean nightMode = false;
   private ActivityLightLevelManager activityLightLevelManager;
-  private Analytics analytics;
   private SharedPreferences sharedPreferences;
 
   @Override
@@ -76,7 +73,6 @@ public class EditSettingsActivity extends PreferenceActivity
 
     EditSettingsEntryPoint entryPoint = EntryPointAccessors.fromApplication(
         getApplicationContext(), EditSettingsEntryPoint.class);
-    analytics = entryPoint.analytics();
     sharedPreferences = entryPoint.sharedPreferences();
 
     ActivityLightLevelChanger lightLevelChanger = new ActivityLightLevelChanger(
@@ -123,7 +119,6 @@ public class EditSettingsActivity extends PreferenceActivity
   @Override
   public void onPause() {
     super.onPause();
-    updatePreferences();
     activityLightLevelManager.onPause();
   }
 
@@ -135,15 +130,6 @@ public class EditSettingsActivity extends PreferenceActivity
         ApplicationConstants.SENSOR_DAMPING_PREF_KEY).setEnabled(enabled);
     preferenceFragment.findPreference(
         ApplicationConstants.REVERSE_MAGNETIC_Z_PREFKEY).setEnabled(enabled);
-  }
-
-  /**
-   * Updates preferences on singletons, so we don't have to register
-   * preference change listeners for them.
-   */
-  private void updatePreferences() {
-    Log.d(TAG, "Updating preferences");
-    analytics.setEnabled(preferenceFragment.findPreference(Analytics.PREF_KEY).isEnabled());
   }
 
   @Override

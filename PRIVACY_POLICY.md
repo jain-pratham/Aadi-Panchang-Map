@@ -1,6 +1,6 @@
 # Aadi Panchang Map Privacy Policy
 
-**Effective Date:** September 13, 2026
+**Effective Date:** October 19, 2026
 
 ---
 
@@ -19,7 +19,7 @@ We respect your privacy and design our application to operate with minimal data 
 Depending on your device permissions and the specific build variant of the application (Google Play Services / GMS build vs. F-Droid build), Aadi Panchang Map may access the following on-device information:
 
 - **Approximate Geographic Location** (`ACCESS_COARSE_LOCATION`): Used to determine your viewing location for sky rendering.
-- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API) and analytics reporting (GMS build variant only).
+- **Network State and Internet Access** (`INTERNET`, `ACCESS_NETWORK_STATE`): Used for optional static map tile rendering (Geoapify Maps API) and feature configuration checks (Firebase Remote Config in the GMS build variant).
 - **Device Sensors**: Accesses accelerometer, magnetic field, and rotation vector sensors on-device to dynamically align the star map as you move your device.
 - **Device Wake Lock and Vibration**: Used to keep the screen active while viewing the star map and provide tactile feedback for UI interactions.
 
@@ -32,47 +32,25 @@ Aadi Panchang Map requires location context to compute and display accurate astr
 - **On-Device Processing:** Location data accessed by the application is processed locally on your device to update the internal astronomical model (`AstronomerModel`).
 - **Approximate Location Only:** The application requests approximate location permission (`ACCESS_COARSE_LOCATION`). It does not request precise GPS location permission (`ACCESS_FINE_LOCATION`).
 - **Manual Location Option:** You can choose to deny location permission or manually configure/override your location by entering city names or geographic coordinates within the app settings.
-- **No Location Tracking in Analytics:** Geographic latitude and longitude coordinates are **not** intentionally transmitted through the application's explicit analytics events.
-- **Optional Static Map Preview:** If a Geoapify API key is configured and you view the Location Management map screen, latitude/longitude coordinates are sent directly to Geoapify static map servers (`maps.geoapify.com`) to display a location preview tile.
+- **No Location Tracking:** No analytics or telemetry SDKs exist to record, transmit, or monitor your location.
+- **Optional Static Map Preview:** If a Geoapify API key is configured and you view the Location Management map screen, latitude/longitude coordinates are sent directly to Geoapify static map servers (`maps.geoapify.com`) to display a location preview tile. If no API key is configured (the default build setting), no map tile requests are made.
 
 ---
 
 ## 4. Analytics
 
-Aadi Panchang Map handles analytics differently depending on the build flavor of the application:
+Aadi Panchang Map contains **no analytics SDKs and performs no telemetry tracking** in either the Google Play Services (GMS) or F-Droid build variants.
 
-### A. Google Play Services (GMS) Build Variant
-In the GMS version of the application, **analytics collection is enabled by default** and can be disabled by the user at any time. The GMS variant utilizes **Google Firebase Analytics** to collect aggregated usage statistics and technical telemetry to help us understand feature usage, improve stability, and evaluate translation coverage.
-
-Data processed in the GMS variant includes:
-
-1. **Explicit Application Events:**
-   - **Feature & Menu Interactions:** Toggling map layers (stars, constellations, planets, grid, horizon, meteor showers), opening menus (settings, credits, help, calibration, time travel, gallery), and onboarding slide views.
-   - **Search Queries:** In-app search query terms (e.g., celestial object names entered into the search bar) to measure search success and identify missing catalog items.
-   - **App Performance & Sensor Metrics:** Session duration buckets, local startup hour, night mode toggle status, and available device hardware sensors (e.g., presence of gyroscope or rotation vector sensors).
-   - **Settings & Preference Changes:** Changes to app preference flags (e.g., auto/manual mode, sound effects).
-
-2. **Automatic Technical Telemetry (Processed by Firebase SDK):**
-   - When analytics is enabled, the Google Firebase Analytics SDK automatically processes technical device information including:
-     - Firebase App Instance ID (a randomly generated identifier unique to the app installation).
-     - Device hardware model and manufacturer.
-     - Operating system version and build.
-     - Application version and locale/language setting.
-     - Screen resolution and device orientation.
-     - Coarse city/country location derived from client IP address by Google server infrastructure.
-
-### B. F-Droid Build Variant
-The F-Droid version of Aadi Panchang Map is **100% open-source and offline**. It contains **no Firebase Analytics SDK** and utilizes no-op stubs. In the F-Droid build, **zero analytics events or usage metrics are collected or transmitted**.
+- **Firebase Analytics Removed:** The Google Firebase Analytics SDK and all telemetry logging have been completely removed.
+- **Zero Usage Statistics:** The application does not collect, record, or transmit usage statistics, feature interaction metrics, search queries, session durations, or device sensor metrics.
+- **No Analytics App Instance ID:** The application does not generate or retrieve an analytics app instance ID or advertising identifier.
+- **Both Build Variants:** Both the Google Play Services (GMS) variant and the F-Droid variant operate with zero analytics tracking.
 
 ---
 
-## 5. Analytics Opt-Out
+## 5. Analytics Settings
 
-In the GMS build variant, analytics collection is **optional**.
-
-- **Default State:** Analytics is enabled by default in GMS builds.
-- **Opt-Out Control:** You can disable analytics data collection at any time by navigating to **App Settings** and turning off the **Usage Statistics / Analytics** option (`enable_analytics`).
-- **Effect of Opt-Out:** Turning off analytics invokes `FirebaseAnalytics.setAnalyticsCollectionEnabled(false)`, halting both custom application event logging and automatic telemetry collection by the Firebase SDK.
+Because all analytics collection and telemetry code have been completely removed from both build variants, no analytics toggles, opt-in/opt-out preferences, or usage tracking controls are present or needed in the application.
 
 ---
 
@@ -85,17 +63,17 @@ Aadi Panchang Map is designed specifically for observing the night sky. The appl
 - Financial, payment, or credit card information.
 - Photos, media files, or audio recordings.
 - User accounts, passwords, or social media profiles.
-- Advertising Identifiers (AAID/GAID) — the app does not declare advertising ID permissions.
+- Advertising Identifiers (AAID/GAID) — the app does not declare or use advertising ID permissions (`com.google.android.gms.permission.AD_ID`).
+- Search queries, layer toggles, menu interactions, or user preferences to any analytics server.
 
 ---
 
 ## 7. How Information Is Used
 
-Information accessed or collected by Aadi Panchang Map is used solely for the following purposes:
+Information accessed by Aadi Panchang Map is used solely for the following purposes:
 
 1. **App Functionality:** To calculate local astronomical object positions and render the night sky map relative to your location.
 2. **User Preferences:** To save your display settings, manual location choices, and layer preferences locally on your device.
-3. **App Improvements (GMS Build Only):** To analyze aggregated feature usage, diagnose missing sensor hardware issues, and optimize application performance.
 
 ---
 
@@ -103,26 +81,25 @@ Information accessed or collected by Aadi Panchang Map is used solely for the fo
 
 The application interacts with third-party service providers only as described below:
 
-- **Google Firebase Analytics (GMS Build Only):** Used for aggregated usage analytics in the Play Store version. Data processed by Firebase Analytics is governed by Google's Privacy Policy and standard service terms.
-  - *Reference:* [Google Privacy & Terms](https://policies.google.com/privacy) (URL to be verified before publication)
+- **Firebase Remote Config (GMS Build Only):** The GMS build utilizes Google Firebase Remote Config solely to check runtime feature configuration values (specifically the `warm_welcome_enabled` feature flag controlling onboarding display). When checking for configuration updates, the Firebase Remote Config SDK connects to Google infrastructure (`firebaseremoteconfig.googleapis.com`), transmitting standard client connection metadata (such as IP address, app package name, and device OS version) required by network protocols. Remote Config does not collect user behavior analytics or track user identity.
 - **Geoapify Maps API (Optional Runtime Service):** Used to load static location map preview tiles in Location Settings. This service is available in both GMS and F-Droid builds only if a Geoapify API key is configured at build time. When active, requests sent to `https://maps.geoapify.com` include center coordinates. If no API key is set (default `"unset"`), no network requests are sent.
 - **External Links & Browser Intents:** If you click on external links (such as celestial catalog reference pages, NASA/ESO image source credits, or troubleshooting links), those links open in your device's web browser and are governed by the privacy policies of the respective external websites.
 
-*Note: The application does not contain advertising SDKs (such as AdMob), third-party ad networks, social login SDKs, or third-party crash reporters (such as Crashlytics).*
+*Note: The application does not contain advertising SDKs (such as AdMob), analytics SDKs, third-party ad networks, social login SDKs, or third-party crash reporters (such as Crashlytics).*
 
 ---
 
 ## 9. Data Storage and Retention
 
 - **Local Device Storage:** All user preferences, layer toggles, and manual location coordinates are stored locally on your device using standard Android `SharedPreferences`. This data remains on your device until you uninstall the app or clear the app's data in Android System Settings.
-- **Analytics Data Retention:** Analytics metrics collected via Google Firebase in the GMS build are retained in accordance with standard Google Firebase Analytics data retention schedules and settings. The project does not independently control Google's underlying infrastructure retention schedule.
+- **Remote Config Local Cache:** Firebase Remote Config maintains a local cache of configuration values on device storage to minimize network requests.
 
 ---
 
 ## 10. Data Deletion
 
-- **Local Data Deletion:** You can delete all locally stored app settings and saved manual locations at any time by using the **Clear Data / Clear Storage** function in your device's Android System Settings, or by uninstalling the application.
-- **Firebase Analytics Data:** Disabling the analytics setting within the app prevents future analytics collection. Because analytics metrics are aggregated and do not contain personal user accounts or email addresses, individual account deletion mechanisms are not applicable.
+- **Local Data Deletion:** You can delete all locally stored app settings, cached parameters, and saved manual locations at any time by using the **Clear Data / Clear Storage** function in your device's Android System Settings, or by uninstalling the application.
+- **No Cloud User Accounts:** Because the application does not collect analytics metrics, user accounts, or cloud profiles, there is no remote user data stored on our servers to delete.
 
 ---
 
@@ -134,7 +111,7 @@ Aadi Panchang Map is a general-audience educational application for viewing cele
 
 ## 12. Security
 
-We take reasonable technical precautions within the design of Aadi Panchang Map to safeguard your information. Location processing for star mapping occurs on-device, and analytics transmission (in the GMS variant) uses encrypted HTTPS connections. However, please be aware that no method of electronic transmission or storage can be guaranteed to be 100% secure.
+We take reasonable technical precautions within the design of Aadi Panchang Map to safeguard your information. Location processing for star mapping occurs on-device, and third-party network communications (Firebase Remote Config and Geoapify Maps API) use encrypted HTTPS connections. However, please be aware that no method of electronic transmission or storage can be guaranteed to be 100% secure.
 
 ---
 

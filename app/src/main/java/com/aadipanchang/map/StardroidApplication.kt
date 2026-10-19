@@ -21,16 +21,12 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Build
-import android.os.Bundle
-import android.text.TextUtils
 import android.util.Log
 import androidx.core.content.pm.PackageInfoCompat
 import androidx.preference.PreferenceManager
-import com.aadipanchang.map.activities.util.ActivityLightLevelManager
 import com.aadipanchang.map.layers.LayerManager
 import com.aadipanchang.map.util.AnalyticsInterface
 import com.aadipanchang.map.util.MiscUtil.getTag
-import com.aadipanchang.map.util.PreferenceChangeAnalyticsTracker
 import com.aadipanchang.map.views.PreferencesButton
 import dagger.hilt.android.HiltAndroidApp
 import dagger.hilt.EntryPoint
@@ -53,7 +49,6 @@ open class StardroidApplication : Application() {
     fun layerManager(): LayerManager
     fun getAnalytics(): AnalyticsInterface
     fun sensorManager(): SensorManager?
-    fun preferenceChangeAnalyticsTracker(): PreferenceChangeAnalyticsTracker
   }
 
   private val entryPoint: StardroidApplicationEntryPoint by lazy {
@@ -64,9 +59,6 @@ open class StardroidApplication : Application() {
   val layerManager: LayerManager by lazy { entryPoint.layerManager() }
   val analytics: AnalyticsInterface by lazy { entryPoint.getAnalytics() }
   val sensorManager: SensorManager? by lazy { entryPoint.sensorManager() }
-  val preferenceChangeAnalyticsTracker: PreferenceChangeAnalyticsTracker by lazy {
-    entryPoint.preferenceChangeAnalyticsTracker()
-  }
 
   override fun attachBaseContext(base: android.content.Context) {
     val prefs = androidx.preference.PreferenceManager.getDefaultSharedPreferences(base)
@@ -96,44 +88,13 @@ open class StardroidApplication : Application() {
   fun performHiltInitialization() {
     Log.d(TAG, "StardroidApplication: performHiltInitialization")
     setUpAnalytics(versionName)
-    val sensorPath = performFeatureCheck()
-    fireStartupEvent(sensorPath)
+    performFeatureCheck()
   }
 
   private fun setUpAnalytics(versionName: String?) {
-    analytics.setEnabled(preferences.getBoolean(AnalyticsInterface.PREF_KEY, true))
-
-    // Ugly hack since this isn't injectable
+    // Set no-op analytics on PreferencesButton
     PreferencesButton.setAnalytics(analytics)
-    var previousVersion = preferences.getString(PREVIOUS_APP_VERSION_PREF, NONE)
-    var newUser = false
-    if (previousVersion == NONE) {
-      // It's possible a previous version exists, it's just that it wasn't a recent enough
-      // version to have set PREVIOUS_APP_VERSION_PREF.  If so, we should see that the TOS
-      // have been accepted.
-      val oldPreviousVersionKey = "read_tos"
-      if (preferences.contains(oldPreviousVersionKey)) {
-        previousVersion = UNKNOWN
-      } else {
-        // Best guess that this is the first every run of a new user.
-        // Could also be someone with a new device.
-        newUser = true
-      }
-    }
-    analytics.setUserProperty(AnalyticsInterface.NEW_USER, newUser.toString())
-    if (newUser) {
-      analytics.setUserProperty(AnalyticsInterface.FIRST_INSTALL_VERSION, versionName)
-    }
-    analytics.setUserProperty(AnalyticsInterface.USER_LOCALE,
-        Locale.getDefault().toLanguageTag())
     preferences.edit().putString(PREVIOUS_APP_VERSION_PREF, versionName).apply()
-    if (previousVersion != versionName) {
-      // It's either an upgrade or a new installation
-      Log.d(TAG, "New installation: version $versionName")
-      // No need to track any more - it's automatic in Firebase.
-    }
-
-    preferences.registerOnSharedPreferenceChangeListener(preferenceChangeAnalyticsTracker)
   }
 
   override fun onTerminate() {
@@ -184,38 +145,8 @@ open class StardroidApplication : Application() {
   private fun performFeatureCheck(): String {
     if (sensorManager == null) {
       Log.e(TAG, "No sensor manager")
-      analytics.setUserProperty(
-        AnalyticsInterface.DEVICE_SENSORS, AnalyticsInterface.DEVICE_SENSORS_NONE
-      )
       return AnalyticsInterface.SENSOR_PATH_NONE
     }
-    // Reported available sensors
-    val reportedSensors: MutableList<String> = ArrayList()
-    if (hasDefaultSensor(Sensor.TYPE_ACCELEROMETER)) {
-      reportedSensors.add(AnalyticsInterface.DEVICE_SENSORS_ACCELEROMETER)
-    }
-    if (hasDefaultSensor(Sensor.TYPE_GYROSCOPE)) {
-      reportedSensors.add(AnalyticsInterface.DEVICE_SENSORS_GYRO)
-    }
-    if (hasDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)) {
-      reportedSensors.add(AnalyticsInterface.DEVICE_SENSORS_MAGNETIC)
-    }
-    if (hasDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)) {
-      reportedSensors.add(AnalyticsInterface.DEVICE_SENSORS_ROTATION)
-    }
-
-    // TODO: Change to String.join once we're at API > 26
-    analytics.setUserProperty(
-      AnalyticsInterface.DEVICE_SENSORS, TextUtils.join("|", reportedSensors)
-    )
-    analytics.setUserProperty(
-      AnalyticsInterface.HAS_GYRO,
-      reportedSensors.contains(AnalyticsInterface.DEVICE_SENSORS_GYRO).toString()
-    )
-    analytics.setUserProperty(
-      AnalyticsInterface.HAS_ROTATION_VECTOR,
-      reportedSensors.contains(AnalyticsInterface.DEVICE_SENSORS_ROTATION).toString()
-    )
 
     // Check for a particularly strange combo - it would be weird to have a rotation sensor
     // but no accelerometer or magnetic field sensor
@@ -259,33 +190,6 @@ open class StardroidApplication : Application() {
            else AnalyticsInterface.SENSOR_PATH_ACCEL_MAG
   }
 
-  private fun fireStartupEvent(sensorPath: String) {
-    val cal = Calendar.getInstance()
-    val isNight = ApplicationConstants.NIGHT_MODE_VALUE ==
-        preferences.getString(ActivityLightLevelManager.LIGHT_MODE_KEY, "")
-    val b = Bundle()
-    b.putInt(AnalyticsInterface.START_EVENT_HOUR, cal[Calendar.HOUR_OF_DAY])
-    b.putInt(AnalyticsInterface.START_EVENT_DAY_OF_WEEK, cal[Calendar.DAY_OF_WEEK] - 1)
-    b.putBoolean(AnalyticsInterface.START_EVENT_NIGHT_MODE, isNight)
-    b.putString(AnalyticsInterface.START_EVENT_SENSOR_PATH, sensorPath)
-    // Settings snapshot
-    b.putBoolean(ApplicationConstants.SHARED_PREFERENCE_DISABLE_GYRO,
-        preferences.getBoolean(ApplicationConstants.SHARED_PREFERENCE_DISABLE_GYRO, false))
-    b.putString(ApplicationConstants.SENSOR_SPEED_PREF_KEY,
-        preferences.getString(ApplicationConstants.SENSOR_SPEED_PREF_KEY, ApplicationConstants.SENSOR_SPEED_STANDARD))
-    b.putString(ApplicationConstants.SENSOR_DAMPING_PREF_KEY,
-        preferences.getString(ApplicationConstants.SENSOR_DAMPING_PREF_KEY, ApplicationConstants.SENSOR_DAMPING_EXTRA_HIGH))
-    b.putBoolean(ApplicationConstants.AUTO_LEVEL_HORIZON_PREF_KEY,
-        preferences.getBoolean(ApplicationConstants.AUTO_LEVEL_HORIZON_PREF_KEY, true))
-    b.putBoolean(ApplicationConstants.NO_AUTO_LOCATE_PREF_KEY,
-        preferences.getBoolean(ApplicationConstants.NO_AUTO_LOCATE_PREF_KEY, false))
-    b.putBoolean(ApplicationConstants.SHOW_OBJECT_INFO_PREF_KEY,
-        preferences.getBoolean(ApplicationConstants.SHOW_OBJECT_INFO_PREF_KEY, true))
-    b.putBoolean(ApplicationConstants.SOUND_EFFECTS,
-        preferences.getBoolean(ApplicationConstants.SOUND_EFFECTS, true))
-    analytics.trackEvent(AnalyticsInterface.START_EVENT, b)
-  }
-
   private fun hasDefaultSensor(sensorType: Int): Boolean {
     val sensor = sensorManager?.getDefaultSensor(sensorType) ?: return false
     val dummy: SensorEventListener = object : SensorEventListener {
@@ -300,9 +204,6 @@ open class StardroidApplication : Application() {
     val success = sensorManager?.registerListener(
       dummy, sensor, SensorManager.SENSOR_DELAY_UI
     ) ?: false
-    if (!success) {
-      analytics.setUserProperty(AnalyticsInterface.SENSOR_LIAR, "true")
-    }
     sensorManager?.unregisterListener(dummy)
     return success
   }
