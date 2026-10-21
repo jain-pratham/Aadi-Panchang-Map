@@ -17,6 +17,7 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import com.aadipanchang.map.R
 
@@ -43,24 +44,45 @@ object NightModeHelper {
         )
         val textColor =
             activity.getColor(if (nightMode) R.color.night_text_color else android.R.color.white)
-        val title = activity.getTitle()
-        if (title != null) {
-            val styledTitle = SpannableString(title.toString())
-            styledTitle.setSpan(ForegroundColorSpan(textColor), 0, styledTitle.length, 0)
-            actionBar.setTitle(styledTitle)
-        }
-        // Tint the Aadi Panchang Map logo shown in the action bar
-        var icon = activity.getResources().getDrawable(
-            R.drawable.logo, activity.getTheme()
-        )
-        if (icon != null) {
-            icon = icon.mutate()
-            if (nightMode) {
-                icon.setColorFilter(textColor, PorterDuff.Mode.MULTIPLY)
-            } else {
-                icon.clearColorFilter()
+
+        val customView = actionBar.customView
+        if (customView != null) {
+            val logoView = customView.findViewById<ImageView>(R.id.header_app_logo)
+            if (logoView != null) {
+                val icon = activity.resources.getDrawable(R.drawable.logo, activity.theme)?.mutate()
+                if (icon != null) {
+                    if (nightMode) {
+                        icon.setColorFilter(textColor, PorterDuff.Mode.MULTIPLY)
+                    } else {
+                        icon.clearColorFilter()
+                    }
+                    logoView.setImageDrawable(icon)
+                }
             }
-            actionBar.setIcon(icon)
+            val titleView = customView.findViewById<TextView>(R.id.header_app_title)
+            titleView?.setTextColor(textColor)
+        } else {
+            val title = activity.title?.toString()?.takeIf { it.isNotBlank() }
+                ?: activity.getString(R.string.app_name)
+            val styledTitle = SpannableString(title)
+            styledTitle.setSpan(ForegroundColorSpan(textColor), 0, styledTitle.length, 0)
+            actionBar.title = styledTitle
+            actionBar.setDisplayShowTitleEnabled(true)
+
+            // Tint the Aadi Panchang Map logo shown in the action bar
+            var icon = activity.resources.getDrawable(
+                R.drawable.logo, activity.theme
+            )
+            if (icon != null) {
+                icon = icon.mutate()
+                if (nightMode) {
+                    icon.setColorFilter(textColor, PorterDuff.Mode.MULTIPLY)
+                } else {
+                    icon.clearColorFilter()
+                }
+                actionBar.setIcon(icon)
+                actionBar.setLogo(icon)
+            }
         }
     }
 

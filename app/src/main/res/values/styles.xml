@@ -13,6 +13,14 @@
 
     <style name="FullscreenActionBarStyle" parent="android:Widget.DeviceDefault.ActionBar">
         <item name="android:background">@color/black_overlay</item>
+        <item name="android:displayOptions">showCustom</item>
+        <item name="android:titleTextStyle">@style/FullscreenActionBarTitleText</item>
+    </style>
+
+    <style name="FullscreenActionBarTitleText" parent="android:TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TableRow_RowHeading" parent="TableRow_Element">

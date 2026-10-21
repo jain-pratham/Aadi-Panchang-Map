@@ -2,32 +2,38 @@
 <resources>
     <!-- The folks who made Aadi Panchang Map Happen -->
 <string name="credits_text" translation_description="This page credits the people and organizations who support and maintain the app Aadi Panchang Map. Please do not change the &lt; and &gt; markup">
-    &lt;h1&gt;विकास का समर्थन करें&lt;/h1&gt;
-&lt;p&gt;Aadi Panchang Map मुफ़्त, ओपन सोर्स और विज्ञापन-मुक्त है। यदि आप इसका उपयोग करना पसंद करते हैं, तो कृपया समर्थन करने पर विचार करें &lt;a href="https://github.com/jain-pratham/Aadi-Panchang-Map"&gt;हमारे GitHub पृष्ठ&lt;/a&gt; पर निरंतर विकास के लिए।&lt;/p&gt;
-&lt;p&gt;%1$s&lt;/p&gt;
+&lt;h1&gt;About Aadi Panchang Map&lt;/h1&gt;
+&lt;p&gt;Aadi Panchang Map ओपन-सोर्स Sky Map प्रोजेक्ट पर आधारित एक स्वतंत्र खगोल विज्ञान एप्लिकेशन है। यह अपने लक्षित उपयोगकर्ताओं के लिए अपनी पहचान प्रदान करते हुए मूल प्रोजेक्ट के कार्य पर आधारित है।&lt;/p&gt;
 
-&lt;h1&gt;श्रेय&lt;/h1&gt;
-&lt;h2&gt;इंजीनियरिंग&lt;/h2&gt;
-&lt;p&gt;John Taylor, Kevin Serafini&lt;/p&gt;
+&lt;h2&gt;Developed for Samavasaran Jay Kirti Trust&lt;/h2&gt;
+&lt;p&gt;Aadi Panchang Map को Samavasaran Jay Kirti Trust के लिए विकसित किया गया है।&lt;/p&gt;
+&lt;p&gt;इस एप्लिकेशन को Samavasaran Jay Kirti Trust के लिए विकसित एक स्वतंत्र डेरिवेटिव प्रोजेक्ट के रूप में बनाए रखा गया है। यह Sky Map ओपन-सोर्स प्रोजेक्ट से उत्पन्न कार्यों को समाहित करता है और लागू तीसरे पक्ष के आभार और सूचनाओं को बनाए रखता है।&lt;/p&gt;
 
-&lt;h2&gt;ओपन सोर्स योगदानकर्ता&lt;/h2&gt;
-&lt;p&gt;
-    %2$s
-&lt;/p&gt;
-&lt;p&gt;धन्यवाद! &lt;a href="https://github.com/sky-map-team/stardroid/graphs/contributors"&gt;GitHub&lt;/a&gt; पर नवीनतम योगदानकर्ताओं को देखें।
-&lt;/p&gt;
+&lt;h2&gt;Project Repository&lt;/h2&gt;
+&lt;p&gt;स्रोत कोड, समस्या ट्रैकिंग और योगदान:&lt;/p&gt;
+&lt;ul class="credits"&gt;
+&lt;li&gt;प्रोजेक्ट रिपॉजिटरी: &lt;a href="https://github.com/jain-pratham/Aadi-Panchang-Map"&gt;https://github.com/jain-pratham/Aadi-Panchang-Map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;मूल प्रोजेक्ट: &lt;a href="https://github.com/sky-map-team/stardroid"&gt;https://github.com/sky-map-team/stardroid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2&gt;Google पर मूल इंजीनियरिंग, डिज़ाइन और उत्पाद प्रबंधन&lt;/h2&gt;
-&lt;p&gt;Brent Bryan, Dominic Widdows, Hector Ouilhet, James Powell, John Taylor, Kevin Serafini,
-Lior Ron।&lt;/p&gt;
+&lt;h2&gt;Original Project and Engineering&lt;/h2&gt;
+&lt;p&gt;मूल Sky Map प्रोजेक्ट Google Inc. द्वारा विकसित किया गया था और 2012 में ओपन सोर्स किया गया था। Aadi Panchang Map उस ओपन-सोर्स कोड पर आधारित एक स्वतंत्र डेरिवेटिव प्रोजेक्ट है और Google Inc. द्वारा समर्थित, प्रायोजित या उससे संबद्ध नहीं है।&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Google पर मूल इंजीनियरिंग, डिज़ाइन और उत्पाद प्रबंधन:&lt;/b&gt;&lt;br/&gt;
+Brent Bryan, Dominic Widdows, Hector Ouilhet, James Powell, John Taylor, Kevin Serafini, Lior Ron.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;ओपन सोर्स रखरखाव:&lt;/b&gt;&lt;br/&gt;
+John Taylor, Kevin Serafini.&lt;/p&gt;
+&lt;p&gt;Pat Stephenson को विशेष धन्यवाद जिन्होंने अपनी G1-फोन प्रतियोगिता के साथ विचार को प्रेरित किया, और Chris DiBona और Michael Weiss-Malik को Google से ओपन सोर्स में संक्रमण में मदद करने के लिए।&lt;/p&gt;
 
-&lt;h1&gt;स्वीकृतियाँ&lt;/h1&gt;
-&lt;p&gt;मूल Sky Map प्रोजेक्ट Google Inc. द्वारा विकसित किया गया था और 2012 में ओपन सोर्स किया गया था। Aadi Panchang Map उस ओपन-सोर्स कोड पर आधारित एक स्वतंत्र डेरिवेटिव प्रोजेक्ट है।&lt;/p&gt;
-&lt;p&gt;Pat Stephenson को विशेष धन्यवाद जिन्होंने अपनी G1-फोन प्रतियोगिता के साथ विचार को प्रेरित किया
-    और Chris DiBona और Michael Weiss-Malik को Google से ओपन सोर्स में संक्रमण में मदद करने के लिए।&lt;/p&gt;
+&lt;h2&gt;Open-Source Acknowledgments&lt;/h2&gt;
+&lt;p&gt;Aadi Panchang Map मुफ़्त, ओपन सोर्स और विज्ञापन-मुक्त है। यह प्रोजेक्ट एक विभाजित ओपन-सोर्स लाइसेंसिंग संरचना के तहत वितरित किया जाता है:&lt;/p&gt;
+&lt;ul class="credits"&gt;
+&lt;li&gt;&lt;b&gt;GNU General Public License v3.0 (GPLv3):&lt;/b&gt; वर्तमान और डेरिवेटिव प्रोजेक्ट संशोधनों पर लागू होता है। शर्तों के लिए रूट LICENSE फ़ाइल देखें।&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Apache License, Version 2.0:&lt;/b&gt; Google Inc. द्वारा मूल रूप से विकसित लीगेसी घटकों और मूल Apache 2.0 हेडर वाली अलग-अलग स्रोत फ़ाइलों पर लागू होता है।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/sky-map-team/stardroid/graphs/contributors"&gt;GitHub&lt;/a&gt; पर मूल प्रोजेक्ट योगदानकर्ताओं को देखें।&lt;/p&gt;
 
-&lt;h2&gt;डेटा&lt;/h2&gt;
-&lt;p&gt;Aadi Panchang Map निम्नलिखित से डेटा से प्राप्त मानचित्र का उपयोग करता है:&lt;/p&gt;
+&lt;h2&gt;Astronomy Data Sources&lt;/h2&gt;
+&lt;p&gt;Aadi Panchang Map निम्नलिखित से प्राप्त डेटा पर आधारित मानचित्रों और खगोलीय स्थितियों का उपयोग करता है:&lt;/p&gt;
 &lt;ul class="credits"&gt;
 &lt;li&gt;Centre de Donnees astronomiques de Strasbourg (&lt;a href="https://cdsweb.u-strasbg.fr/"&gt;https://cdsweb.u-strasbg.fr/&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;The Bright Star Catalogue, 5th Revised Ed. (Hoffleit D., Warren Jr W.H.)&lt;/li&gt;
@@ -41,16 +47,18 @@ Lior Ron।&lt;/p&gt;
 &lt;li&gt;International Meteor Organization से उल्कापिंड वर्षा डेटा (&lt;a href="https://www.imo.net/data"&gt;https://www.imo.net/data&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;छवि श्रेय&lt;/h2&gt;
-&lt;p&gt;इस ऐप में खगोलीय छवियाँ निम्नलिखित स्रोतों की सौजन्य से प्रदान की गई हैं:&lt;/p&gt;
+&lt;h2&gt;Image and Artwork Credits&lt;/h2&gt;
+&lt;p&gt;इस ऐप में खगोलीय छवियाँ और चित्र निम्नलिखित स्रोतों की सौजन्य से प्रदान किए गए हैं:&lt;/p&gt;
 &lt;ul class="credits"&gt;
 &lt;li&gt;Hubble Space Telescope images: NASA, ESA, and the Space Telescope Science Institute (&lt;a href="https://hubblesite.org/"&gt;hubblesite.org&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Planet images: NASA/JPL-Caltech, NASA/Johns Hopkins APL/Carnegie (MESSENGER), NASA/Johns Hopkins APL/SwRI (New Horizons)&lt;/li&gt;
 &lt;li&gt;Moon image: NASA/GSFC/Arizona State University (Lunar Reconnaissance Orbiter)&lt;/li&gt;
 &lt;li&gt;Star field images: ESO Digitized Sky Survey 2 (&lt;a href="https://archive.eso.org/dss/dss"&gt;archive.eso.org/dss&lt;/a&gt;), CC BY 4.0&lt;/li&gt;
-&lt;li&gt;Constellation charts: IAU and Sky &amp; Telescope (Roger Sinnott &amp; Rick Fienberg), CC BY 4.0&lt;/li&gt;
-&lt;li&gt;Additional Messier images: Gemini Observatory/NOIRLab/NSF/AURA (&lt;a href="https://noirlab.edu/"&gt;noirlab.edu&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Constellation charts: IAU and Sky &amp;amp; Telescope (Roger Sinnott &amp;amp; Rick Fienberg), CC BY 4.0&lt;/li&gt;
+&lt;li&gt;Additional deep-sky object images: Gemini Observatory/NOIRLab/NSF/AURA (&lt;a href="https://noirlab.edu/"&gt;noirlab.edu&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;M31 image: Peter Kennett (&lt;a href="https://commons.wikimedia.org/wiki/File:M31(Kennett).jpg"&gt;Wikimedia Commons&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Sagittarius A* image: EHT Collaboration (&lt;a href="https://www.eso.org/public/images/eso2208-eht-mwa/"&gt;eso.org&lt;/a&gt;), CC BY 4.0&lt;/li&gt;
+&lt;li&gt;Cygnus X-1 illustration: NASA/CXC/M.Weiss (&lt;a href="https://chandra.harvard.edu/photo/2011/cygx1/"&gt;chandra.harvard.edu&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
     </string>
 </resources>

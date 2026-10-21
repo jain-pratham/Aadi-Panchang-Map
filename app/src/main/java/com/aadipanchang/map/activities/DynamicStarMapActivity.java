@@ -33,6 +33,7 @@ import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -356,11 +357,23 @@ public class DynamicStarMapActivity extends androidx.fragment.app.FragmentActivi
       doSearchWithIntent(intent);
     }
 
+    setTitle(R.string.app_name);
     ActionBar actionBar = getActionBar();
     if (actionBar != null) {
-      actionBar.setDisplayShowHomeEnabled(true);
-      actionBar.setDisplayUseLogoEnabled(true);
+      actionBar.setDisplayShowHomeEnabled(false);
+      actionBar.setDisplayUseLogoEnabled(false);
+      actionBar.setDisplayShowTitleEnabled(false);
+      actionBar.setDisplayShowCustomEnabled(true);
+
+      View customHeader = getLayoutInflater().inflate(R.layout.header_title_bar, null);
+      actionBar.setCustomView(
+          customHeader,
+          new ActionBar.LayoutParams(
+              ActionBar.LayoutParams.WRAP_CONTENT,
+              ActionBar.LayoutParams.MATCH_PARENT,
+              Gravity.START | Gravity.CENTER_VERTICAL));
     }
+    applyNightModeToUi();
 
     Log.d(TAG, "-onCreate at " + System.currentTimeMillis());
   }
@@ -695,6 +708,7 @@ public class DynamicStarMapActivity extends androidx.fragment.app.FragmentActivi
   public void onStart() {
     super.onStart();
     sessionStartTime = System.currentTimeMillis();
+    applyNightModeToUi();
   }
 
   private enum SessionBucketLength {
