@@ -51,8 +51,15 @@ class LocationController @Inject constructor(
     }
 
     private fun transitionTo(newState: LocationState) {
-        state = newState
-        stateListeners.toList().forEach { it.onStateChanged(newState) }
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            state = newState
+            stateListeners.toList().forEach { it.onStateChanged(newState) }
+        } else {
+            handler.post {
+                state = newState
+                stateListeners.toList().forEach { it.onStateChanged(newState) }
+            }
+        }
     }
 
     override fun start() {
@@ -142,6 +149,9 @@ class LocationController @Inject constructor(
         cancelAcquiringTimeout()
         transitionTo(LocationState.Acquiring)
         scheduleAcquiringTimeout()
+        locationProvider.startUpdates(ApplicationConstants.LOCATION_UPDATE_MIN_DISTANCE_METRES) { location, accuracy ->
+            onLocationUpdate(location, accuracy)
+        }
     }
 
     @VisibleForTesting
@@ -149,8 +159,13 @@ class LocationController @Inject constructor(
         onLocationUpdate(location, accuracy)
 
     private fun onLocationUpdate(location: LatLong, accuracy: Float?) {
-        // The LocationProvider already filters by minDistanceMetres at the OS level,
-        // so any callback here is a meaningful position change.
+        val currentState = state
+        if (currentState is LocationState.Confirmed &&
+            currentState.source == LocationSource.AUTO &&
+            currentState.location == location
+        ) {
+            return
+        }
         cancelAcquiringTimeout()
         astronomerModel.setLocation(location)
         preferences.edit {

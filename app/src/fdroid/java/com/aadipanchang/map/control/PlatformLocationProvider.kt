@@ -7,6 +7,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
 import android.util.Log
+import androidx.core.location.LocationManagerCompat
 import com.aadipanchang.map.math.LatLong
 import com.aadipanchang.map.util.MiscUtil
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -25,15 +26,43 @@ class PlatformLocationProvider @Inject constructor(
         stopUpdates()
         updateCallback = onUpdate
 
-        for (provider in listOf(LocationManager.GPS_PROVIDER, LocationManager.NETWORK_PROVIDER)) {
-            if (!locationManager.isProviderEnabled(provider)) continue
-            val listener = createListener(onUpdate)
+        // 1. Immediately check last known location from available providers
+        var bestLastLocation: Location? = null
+        for (provider in listOf(LocationManager.PASSIVE_PROVIDER, LocationManager.NETWORK_PROVIDER, LocationManager.GPS_PROVIDER)) {
             try {
-                locationManager.requestLocationUpdates(provider, 0L, minDistanceMetres, listener)
+                if (locationManager.isProviderEnabled(provider)) {
+                    val last = locationManager.getLastKnownLocation(provider)
+                    if (last != null) {
+                        if (bestLastLocation == null || last.time > bestLastLocation.time) {
+                            bestLastLocation = last
+                        }
+                    }
+                }
+            } catch (e: SecurityException) {
+                Log.w(TAG, "SecurityException getting last known location for $provider: ${e.message}")
+            } catch (e: Exception) {
+                Log.w(TAG, "Error getting last known location for $provider: ${e.message}")
+            }
+        }
+        bestLastLocation?.let { loc ->
+            Log.d(TAG, "Got platform last known location: lat=${loc.latitude}, lon=${loc.longitude}")
+            val accuracy = if (loc.hasAccuracy()) loc.accuracy else null
+            onUpdate(LatLong(loc.latitude, loc.longitude), accuracy)
+        }
+
+        // 2. Register listeners for providers safely
+        for (provider in listOf(LocationManager.NETWORK_PROVIDER, LocationManager.GPS_PROVIDER)) {
+            try {
+                if (!locationManager.isProviderEnabled(provider)) continue
+                val listener = createListener(onUpdate)
+                locationManager.requestLocationUpdates(provider, 5000L, minDistanceMetres, listener)
                 activeListeners.add(listener)
-            } catch (_: IllegalArgumentException) {
-                // Provider not supported on this device
+            } catch (e: SecurityException) {
+                Log.w(TAG, "SecurityException registering updates for $provider: ${e.message}")
+            } catch (e: IllegalArgumentException) {
                 Log.w(TAG, "Provider $provider not supported on this device")
+            } catch (e: Exception) {
+                Log.w(TAG, "Error registering updates for $provider: ${e.message}")
             }
         }
     }
@@ -51,14 +80,19 @@ class PlatformLocationProvider @Inject constructor(
     }
 
     override fun stopUpdates() {
-        activeListeners.forEach { locationManager.removeUpdates(it) }
+        activeListeners.forEach {
+            try {
+                locationManager.removeUpdates(it)
+            } catch (e: Exception) {
+                Log.w(TAG, "Error removing listener: ${e.message}")
+            }
+        }
         activeListeners.clear()
         updateCallback = null
     }
 
     override fun isAvailable(): Boolean {
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
-            locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+        return LocationManagerCompat.isLocationEnabled(locationManager)
     }
 
     companion object {

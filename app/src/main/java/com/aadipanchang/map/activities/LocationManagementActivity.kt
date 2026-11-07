@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentActivity
 import com.aadipanchang.map.R
+import com.aadipanchang.map.activities.dialogs.AcquiringLocationTimeoutDialogFragment
 import com.aadipanchang.map.activities.dialogs.LocationPermissionPermanentlyDeniedDialogFragment
 import com.aadipanchang.map.activities.dialogs.LocationPermissionRationaleDialogFragment
 import com.aadipanchang.map.activities.dialogs.ManualLocationEntryDialogFragment
@@ -96,6 +97,7 @@ class LocationManagementActivity : FragmentActivity(),
         super.onResume()
         activityLightLevelManager.onResume()
         locationController.addStateListener(stateListener)
+        locationController.start()
         mapAdapter.onResume()
     }
 
@@ -103,6 +105,7 @@ class LocationManagementActivity : FragmentActivity(),
         super.onPause()
         activityLightLevelManager.onPause()
         locationController.removeStateListener(stateListener)
+        locationController.stop()
         mapAdapter.onPause()
     }
 
@@ -138,6 +141,7 @@ class LocationManagementActivity : FragmentActivity(),
             || state is LocationState.Unset
             || state is LocationState.PermissionDenied
             || state is LocationState.PermissionPermanentlyDenied
+            || state is LocationState.AcquiringTimeout
         ) {
             // Switch to auto
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -163,6 +167,13 @@ class LocationManagementActivity : FragmentActivity(),
             lat = state.location.latitude; lon = state.location.longitude
         }
         showDialog(ManualLocationEntryDialogFragment.newInstance(lat, lon))
+    }
+
+    private fun showAcquiringTimeoutDialog() {
+        val dlg = AcquiringLocationTimeoutDialogFragment.newInstance()
+        dlg.setOnKeepWaiting(Runnable { locationController.keepWaiting() })
+        dlg.setOnEnterManually(Runnable { showManualEntryDialog() })
+        showDialog(dlg)
     }
 
     private fun showRationaleDialog() {
@@ -214,6 +225,14 @@ class LocationManagementActivity : FragmentActivity(),
                 modeToggleButton.text = getString(R.string.location_switch_to_manual)
                 changeButton.visibility = View.GONE
                 showFallbackLabel(R.string.location_map_acquiring)
+            }
+            is LocationState.AcquiringTimeout -> {
+                sourceLabel.text = getString(R.string.location_source_acquiring)
+                coordinatesLabel.visibility = View.GONE
+                modeToggleButton.text = getString(R.string.location_switch_to_auto)
+                changeButton.visibility = View.GONE
+                showFallbackLabel(R.string.location_acquiring_message)
+                showAcquiringTimeoutDialog()
             }
             is LocationState.HardwareUnavailable -> {
                 sourceLabel.text = getString(R.string.location_source_hardware_unavailable)
